@@ -1,0 +1,26 @@
+Title: M&A Negotiation - Nexus AI Acquisition of "LegalGraph"
+Date: 2026-03-11
+Participants: Jessica (Nexus Counsel), Alex (Nexus CEO), Rob (LegalGraph CEO)
+----------------------------------------
+
+Jessica: Rob, we need to clarify the IP assignment. Are you saying the source code for the "Entity Extraction" module was written by a contractor?
+
+Rob: Yes, but we have a standard PIIA (Proprietary Information and Inventions Agreement). It assigns everything to the company.
+
+Jessica: Can you send me that contract? Because if it's not ironclad, Nexus could be liable for IP infringement later.
+
+Alex: Rob, this is a dealbreaker. We are buying you for the tech. If the tech is encumbered, we walk.
+
+Rob: I'll find it. It's in Dropbox somewhere.
+
+Jessica: Also, the non-compete. 3 years for founders is standard in tech M&A.
+
+Rob: 3 years is too long. I want 1 year. I might want to do another startup in 2028.
+
+Alex: Make it 2 years. And limited to "Enterprise Search". You can do consumer AI if you want.
+
+Rob: Done. 2 years.
+
+Jessica: Okay. I'll update the SPA (Share Purchase Agreement). Closing date: April 1st?
+
+Alex: Let's aim for March 31st to book it in Q1.

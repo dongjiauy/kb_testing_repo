@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dave - Knowledge Base Report</title>
+    <style>
+        :root { --bg-color: #f8f9fa; --card-bg: #ffffff; --primary-color: #3b82f6; --secondary-color: #10b981; --accent-color: #f59e0b; --crisis-color: #ef4444; --text-color: #1f2937; --meta-color: #6b7280; --border-color: #e5e7eb; --line-color: #cbd5e1; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .header h1 { color: #1e3a8a; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #4b5563; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #eff6ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #dbeafe; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fef2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Developer Dave - Knowledge Base</h1>
+        <p><strong>Context:</strong> Tech Debt, Career Dilemma & Office Politics</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Critical Incident -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Incident Response</div>
+                    <div class="node-title">GlobalBank Service Outage (P0)</div>
+                    <div class="node-summary">Major outage caused by memory leaks during large vector queries. Hotfix deployed, but exposed deep architectural flaws.</div>
+                    <div class="source-tags"><span class="source-tag">Incident_Postmortem.md</span><span class="source-tag">Code_Snippet_Fix.py</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Root Cause</div>
+                            <div class="node-title">Memory Leak in Python Bindings</div>
+                            <div class="node-summary">The vector engine failed to release memory for result sets >10k items.</div>
+                            <div class="source-tags"><span class="source-tag">Incident_Postmortem.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Remediation</div>
+                            <div class="node-title">Strict Query Limits</div>
+                            <div class="node-summary">Implemented 5s timeout and forced metadata filtering to prevent full table scans.</div>
+                            <div class="source-tags"><span class="source-tag">Incident_Postmortem.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Architecture War -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Engineering Strategy</div>
+                    <div class="node-title">The "Rust Rewrite" Conflict</div>
+                    <div class="node-summary">New VP Kevin is pushing for a full rewrite in Rust. Dave argues this is premature optimization and will delay roadmap.</div>
+                    <div class="source-tags"><span class="source-tag">Architecture_Defense.md</span><span class="source-tag">Slack_Chat_Lisa.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Defense Argument</div>
+                            <div class="node-title">IO-Bound Bottleneck</div>
+                            <div class="node-summary">Latency is 80% DB/Network. Rust only optimizes the 5% app logic, yielding negligible user benefit.</div>
+                            <div class="source-tags"><span class="source-tag">Architecture_Defense.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Defense Argument</div>
+                            <div class="node-title">Ecosystem Lock-in</div>
+                            <div class="node-summary">NLP/AI ecosystem is Python-first. Switching costs for hiring and libraries are too high.</div>
+                            <div class="source-tags"><span class="source-tag">Architecture_Defense.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Career Decision -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Career & Personal</div>
+                    <div class="node-title">Stay or Go Decision</div>
+                    <div class="node-summary">Weighing a lucrative Google offer against the emotional attachment to Nexus AI.</div>
+                    <div class="source-tags"><span class="source-tag">Final_Decision_Stay_or_Go.md</span><span class="source-tag">Offer_Letter_Google.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <!-- L2: Google Offer -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • Opportunity</div>
+                            <div class="node-title">Google L6 Offer Details</div>
+                            <div class="node-summary">Total Comp ~$500k+. Role in DeepMind Infra.</div>
+                            <div class="source-tags"><span class="source-tag">Offer_Letter_Google.txt</span></div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Base Salary</div>
+                                    <div class="node-summary">$280,000 / year.</div>
+                                    <div class="source-tags"><span class="source-tag">Offer_Letter_Google.txt</span></div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Equity (GSU)</div>
+                                    <div class="node-summary">$900,000 vesting over 4 years.</div>
+                                    <div class="source-tags"><span class="source-tag">Offer_Letter_Google.txt</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- L2: Decision Criteria -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Sentiment</div>
+                            <div class="node-title">The "Kevin" Factor</div>
+                            <div class="node-summary">Dave's decision hinges on whether the CEO backs the toxic new VP's Rust policy.</div>
+                            <div class="source-tags"><span class="source-tag">Final_Decision_Stay_or_Go.md</span><span class="source-tag">Slack_Chat_Lisa.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

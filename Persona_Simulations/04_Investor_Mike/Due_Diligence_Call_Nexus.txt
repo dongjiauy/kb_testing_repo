@@ -1,0 +1,24 @@
+Title: Due Diligence Call - Nexus AI Founders
+Date: 2026-03-09
+Participants: Mike (Sequoia), Alex (CEO), Dave (CTO)
+----------------------------------------
+
+Mike: Alex, your growth is solid. 3x YoY. But I'm stuck on the "Moat" question. If OpenAI launches a graph API next month, are you dead?
+
+Alex: No. Because enterprises don't trust OpenAI with their internal graph. We sit on-prem. We are the Switzerland of data.
+
+Dave: Also, our graph construction is proprietary. It's not just RAG. We do entity linking across documents. OpenAI doesn't do that yet.
+
+Mike: "Yet" is the operative word. What if they acquire a graph company?
+
+Alex: Then we become the acquisition target. (Laughs). But seriously, we have 45 enterprise customers locked in. High switching costs.
+
+Mike: Fair. What about the team? You lost your Marketing Director. Is that a signal?
+
+Alex: Ben was burnt out. It happens. We are hiring a new CMO from Salesforce. Jessica is running point.
+
+Mike: Okay. I want to see the retention cohorts by logo size. If the small businesses are churning, that's fine. But if GlobalBank churns, we have a problem.
+
+Alex: GlobalBank just expanded their pilot. Retention is 125% NRR.
+
+Mike: Send me the cohort data. I'll present to the IC on Monday.

@@ -1,0 +1,19 @@
+Title: Standup - 2026-03-10
+Participants: Dave (Lead), Lisa (Senior), Ben (Junior)
+----------------------------------------
+
+Dave: Okay, morning team. Lisa, how's the ingestion pipeline?
+
+Lisa: I'm stuck on the PDF parser. The OCR library we are using (Tesseract) is misinterpreting the financial tables from GlobalBank. It sees "$" as "S" half the time.
+
+Dave: That's a blocker. We cannot ship with incorrect currency symbols. Have you tried Amazon Textract?
+
+Lisa: Textract is expensive. $1.50 per 1000 pages. That will blow our budget.
+
+Ben: What about fine-tuning a small layout model? There's a new HuggingFace model called Donut that does document understanding end-to-end.
+
+Dave: Interesting. Ben, take 2 days to spike on Donut. If it works, we save money. If not, we beg Alex for more budget for Textract.
+
+Lisa: I'll focus on the API rate limiting issue then. GlobalBank is hitting us with 50 concurrent requests and our load balancer is choking.
+
+Dave: Yeah, implement exponential backoff on the client SDK. And let's scale the Kubernetes pods to 10 minimum.

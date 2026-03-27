@@ -1,0 +1,66 @@
+# Knowledge Base 终极分层架构方案：动态本体论模型 (Dynamic Ontology Model)
+
+## 一、 为什么这是最高级的方案？（设计思路与底层逻辑）
+
+在允许 AI 自适应展开 1~5 层知识树的背景下，如果不加干预，AI 的分类逻辑通常是“短视且混乱”的。比如今天用户传了一个《与红杉的尽调会议纪要》，完全自由的 AI 极有可能在 Level 1 创建一个叫“红杉尽调”或者“本周会议”的节点。随着时间推移，L1 会充满几十个颗粒度完全不一致的垃圾文件夹，彻底失去 Knowledge Base 的价值。
+
+最高级的架构不应该是“完全死板的文件夹”，也不应该是“完全随机的 AI 聚类”，而是**模拟一个顶尖人类幕僚（Chief of Staff）的归档心智**。
+
+这个心智模型就是**“动态本体论模型”**，它将方案一（普适分类）和方案二（用户画像）进行了深度化学反应，并引入了“双轨制”的顶层设计：
+
+### 核心分层法则：
+1. **Level 1 (Root 层)：身份锚定层 (Role-based Pillars) —— 极度稳定，但保留普适灵活性**
+   - 人的大脑最多同时处理 5-7 个核心模块。L1 绝对不允许因为单次会议、单个项目或特定日期来创建。
+   - L1 必须由**用户的 Onboarding 画像（角色/行业）**推导而出，形成 4-6 个高度凝练的“职业支柱 (Pillars)”。
+   - **关键防死锁机制 (双轨制)**：绝不能把 AI 框死在纯职业身份里。除了职业画像，必须预留出诸如“个人生活 (Personal Life)”、“通识学习 (General Learning/Readings)”、“日常运营 (Daily Operations)”这类**所有人都会有的底层常驻节点**，以吸收非职业向的生活碎片和闲聊信息。
+2. **Level 2 (Entity 层)：核心实体层 (Core Entities) —— 动态增长，但不碎**
+   - 在 L1 的大支柱下，L2 必须是“有生命周期的实质性实体”，比如：具体的项目名（Project Titan）、具体的关键组织/客户（红杉资本）、具体的核心产品线、或者是生活中的某个大模块（如“家庭财务”、“健康计划”）。
+3. **Level 3 ~ Level 5 (Adaptive 层)：自适应碎片收纳层 —— 彻底放权给 AI**
+   - 只有到了 L3 及以下，AI 才可以自由发挥，将具体的会议、文档章节、技术细节、Todo 按照信息密度（Density）无限拆分，直到不可分割的“原子层（Atomic Facts）”。
+
+---
+
+## 二、 给大模型的终极 Prompt 模块
+
+建议将原 PRD 中的 `# Phase 1` 和 `# Phase 2` 替换为以下经过严密约束的 Prompt（英文版，直接可贴入你的系统）：
+
+```markdown
+# Instructions
+
+### Phase 1: Cognitive Anchoring (Level 1 & Level 2 Strict Rules)
+**Context:** The User Profile is [Role: {user_role}, Industry: {user_industry}, Interests: {user_interests}].
+
+To prevent structural chaos, you MUST build the top tiers of the Knowledge Base simulating a top-tier Chief of Staff's mental model, strictly following these constraints:
+
+*   **Level 1 (The Pillars - HIGHLY STABLE BUT HOLISTIC):** You MUST categorize all input into high-level "Pillars". These Pillars must strike a balance between the user's highly specific professional persona AND universal human contexts.
+    *   **ABSOLUTE PROHIBITION:** NEVER create a Level 1 node based on a single event, a specific meeting, a date, a minor task, or a specific document title. Level 1 must be a broad, enduring domain.
+    *   **The Professional Pillars (Tailored):** Generate Pillars tailored to the user's Profile (e.g., if Founder: "Fundraising & Investor Relations", "Company Strategy", "Product Vision").
+    *   **The Universal Pillars (Flexible Fallbacks):** You MUST implicitly support universal life categories if the input content is not purely professional. If the input dictates, you may create L1 nodes such as "Personal Life & Health", "Daily Operations/Admin", or "General Learning & Reading" to absorb personal fragments, casual chats, or non-work-related knowledge.
+*   **Level 2 (The Entities - DYNAMIC BUT SUBSTANTIAL):** Within a L1 Pillar, Level 2 nodes MUST represent major, ongoing entities. These are specific Projects (e.g., "Project Titan"), specific Organizations/Clients (e.g., "Sequoia Capital"), major Product Modules, or specific life domains (e.g., "Fitness Plan", "House Renovation"). Do not put granular daily tasks here.
+
+### Phase 2: Adaptive Decomposition (Level 3 to Level 5)
+Once safely inside a Level 2 Entity, you have full freedom to recursively decompose the content based on its complexity, semantics, and information density.
+
+*   **The Container Levels (L3/L4):** Use these levels to group specific events (e.g., "Q3 Kickoff Meeting"), specific features, document chapters, or distinct chronological phases.
+*   **The Zero Bullet Points Rule (CRITICAL):** You are strictly FORBIDDEN from using bulleted lists to group distinct items within a single node's summary. If a concept contains multiple independent items (e.g., 3 different action items, 2 distinct design specs), you MUST branch them out into separate child nodes.
+*   **The Atomic Leaf Constraint:** The final node of any branch (whether it organically ends at L2, L3, L4, or hits the L5 limit) MUST contain only ONE primary concept or indivisible truth (a single decision, a single data point, a specific action item).
+
+### Phase 3: Node Construction (Strict Requirement)
+(保持你原 PRD 的 Phase 3 不变，继续强调 summary 长度、source_tags、language 等...)
+```
+
+## 三、 预期效果推演
+假设用户（画像：SaaS 创业公司创始人）上传了一份名为《2024-03-12 研发与高瓴资本会谈纪要.docx》的文件，并在之后口述了一条：“记得帮我订明天去北京看颈椎病的机票。”
+
+**✅ 最终生成的结构：**
+
+L1: 融资与资方关系 (The Professional Pillar - 基于 Founder 画像)
+  L2: 高瓴资本 (Entity)
+    L3: 2024-03 尽调与产品会谈 (Event 层)
+      L4: 对研发进度的担忧 (Topic 拆分)
+        L5: 事实：高瓴要求 Q3 必须上线多租户架构 (原子节点)
+
+L1: 个人生活与健康 (The Universal Pillar - 完美吸纳生活碎片)
+  L2: 医疗与就诊 (Entity)
+    L3: 颈椎病治疗 (Topic)
+      L4: 事实：需要预订去北京的机票 (Action Item, 原子节点)

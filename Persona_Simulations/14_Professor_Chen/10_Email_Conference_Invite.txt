@@ -1,0 +1,17 @@
+Subject: Invitation to Review for NeurIPS 2026
+From: Program Chair <pc@neurips.cc>
+To: Prof. Chen
+
+Dear Prof. Chen,
+
+We invite you to serve as an Area Chair (AC) for NeurIPS 2026.
+Your expertise in Graph Neural Networks would be invaluable.
+
+**Workload**:
+- Handle 15-20 papers.
+- Coordinate reviewers.
+- Attend AC meeting (Virtual).
+
+Please accept by clicking the link below.
+
+*Note*: Another AC role? I'm already AC for CVPR. But NeurIPS is prestigious... OK, I'll take it. But I'll make my PhD students help with the initial screening.

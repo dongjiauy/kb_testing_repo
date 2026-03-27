@@ -1,0 +1,18 @@
+# Email: Request for Headcount Exception
+From: Sarah
+To: CEO, CFO
+
+Subject: Urgent HC Request - Security Team
+
+Dear Leadership,
+
+I know we are in a hiring freeze. However, due to the new Data Security Law, we must have a "Data Protection Officer" (DPO).
+
+If we don't hire one by May 1st, we could be fined up to 5% of annual revenue.
+
+I propose we cut 1 Marketing HC and 1 Admin HC to open this slot.
+The cost impact is neutral.
+
+Please approve.
+
+Sarah

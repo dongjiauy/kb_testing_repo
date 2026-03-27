@@ -1,0 +1,11 @@
+# Patient Log - ICU Bed 14
+**Name**: John Doe (Trauma)
+**Status**: Critical
+
+- **02:00**: BP drops to 60/40. Started Levophed.
+- **03:30**: Code Blue. CPR started.
+- **03:45**: ROSC (Return of Spontaneous Circulation) achieved.
+- **04:00**: Family arrived. Wife is screaming. I had to tell her he might be brain dead.
+- **05:00**: He stabilized. But pupils are sluggish.
+
+*Note*: I hate this job sometimes. I look at him and I see Tom. They have the same hands. I need to call Tom. But he won't pick up.

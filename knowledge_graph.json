@@ -1,0 +1,1443 @@
+{
+  "language": "zh",
+  "version": "1.0",
+  "description": "Even AI Knowledge Base — PRD 格式层级知识图谱",
+  "total_pillars": 6,
+  "root_nodes": [
+    {
+      "id": "L1_01",
+      "level": 1,
+      "title": "融资与资本运作",
+      "type": "Container",
+      "summary": "两条并行融资主线：Nexus AI Series B（$30M，$200M 估值，Sequoia 领投）和 CloudMap Series C（$80M，最终 $720M 估值，Robotaxi 转物流后签署）。从 CEO、投资人、法务三视角记录了同一笔融资的完整决策链，核心张力包括 IP 归属风险、估值博弈和 CTO 留存。",
+      "source_tags": [
+        "Persona_Simulations/04_Investor_Mike/IC_Memo_Nexus_AI_Series_B.md",
+        "Persona_Simulations/04_Investor_Mike/LP_Annual_Meeting_Speech_Crisis_Mode.md",
+        "Persona_Simulations/04_Investor_Mike/Partner_Meeting_Minutes_March_9.md",
+        "Persona_Simulations/04_Investor_Mike/Personal_Wealth_Management_Plan.md",
+        "Persona_Simulations/05_Lawyer_Jessica/Due_Diligence_Checklist_LegalGraph.md",
+        "Persona_Simulations/05_Lawyer_Jessica/Legal_Opinion_IP_Risk_Nexus_Deal.md",
+        "Persona_Simulations/05_Lawyer_Jessica/Performance_Review_Self_Assessment.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/02_Doc_Series_C_Pitch_Deck_v2.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/03_Memo_Personal_Strategy.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/04_Doc_Cost_Reduction_Meeting.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/06_Doc_Government_License_Request.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/07_Memo_Personal_Strategy_v2.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/09_Doc_Valuation_Crisis_Meeting.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/10_Doc_Cost_Reduction_Update.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/11_Doc_Series_C_Pitch_Deck_v3.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/13_Doc_Term_Sheet_Analysis.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/14_Email_All_Hands_Pivot.md",
+        "Persona_Simulations/11_CEO_Li_CloudMap/15_Memo_Personal_Strategy_v3.md",
+        "Persona_Simulations/CEO_Work_Files/02_Document_Series_B_Pitch_Deck_Draft.md",
+        "Persona_Simulations/CEO_Work_Files/05_Memo_Strategy_Retreat_Brainstorm.md",
+        "Persona_Simulations/CEO_Work_Files/07_Document_Q1_OKRs_Final_Review.md",
+        "Persona_Simulations/CEO_Work_Files/10_Document_Partnership_Agreement_CloudProvider_Draft.md"
+      ],
+      "children": [
+        {
+          "id": "L2_01",
+          "level": 2,
+          "title": "Nexus AI · Series B",
+          "type": "Container",
+          "summary": "AI 知识图谱 SaaS 的 $30M B 轮融资。ARR $8.1M（YoY +300%），NRR 125%，GlobalBank 为核心客户案例（节省 $2M/年）。法务发现致命 IP 风险：核心算法归属承包商个人，要求 $500 万托管。",
+          "source_tags": [
+            "Persona_Simulations/04_Investor_Mike/IC_Memo_Nexus_AI_Series_B.md",
+            "Persona_Simulations/04_Investor_Mike/LP_Annual_Meeting_Speech_Crisis_Mode.md",
+            "Persona_Simulations/04_Investor_Mike/Partner_Meeting_Minutes_March_9.md",
+            "Persona_Simulations/04_Investor_Mike/Personal_Wealth_Management_Plan.md",
+            "Persona_Simulations/05_Lawyer_Jessica/Due_Diligence_Checklist_LegalGraph.md",
+            "Persona_Simulations/05_Lawyer_Jessica/Legal_Opinion_IP_Risk_Nexus_Deal.md",
+            "Persona_Simulations/05_Lawyer_Jessica/Performance_Review_Self_Assessment.md",
+            "Persona_Simulations/CEO_Work_Files/02_Document_Series_B_Pitch_Deck_Draft.md",
+            "Persona_Simulations/CEO_Work_Files/05_Memo_Strategy_Retreat_Brainstorm.md",
+            "Persona_Simulations/CEO_Work_Files/07_Document_Q1_OKRs_Final_Review.md",
+            "Persona_Simulations/CEO_Work_Files/10_Document_Partnership_Agreement_CloudProvider_Draft.md"
+          ],
+          "children": [
+            {
+              "id": "L3_01",
+              "level": 3,
+              "title": "CEO 视角 · 融资叙事与战略",
+              "type": "Container",
+              "summary": "CEO Alex 的融资材料与内部战略思考，涵盖 Pitch Deck、Q1 OKR 复盘和 APAC 合作协议。",
+              "source_tags": [
+                "Persona_Simulations/CEO_Work_Files/02_Document_Series_B_Pitch_Deck_Draft.md",
+                "Persona_Simulations/CEO_Work_Files/05_Memo_Strategy_Retreat_Brainstorm.md",
+                "Persona_Simulations/CEO_Work_Files/07_Document_Q1_OKRs_Final_Review.md",
+                "Persona_Simulations/CEO_Work_Files/10_Document_Partnership_Agreement_CloudProvider_Draft.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_01",
+                  "level": 4,
+                  "title": "Series B Pitch Deck v4",
+                  "type": "Leaf",
+                  "summary": "融资 $30M，估值 $200M pre-money。ARR $8.1M（YoY +300%），NRR 125%，客户 45 家。GlobalBank 案例：合规审计 4 天→4 小时，ROI $2M/年。资金用途：40% R&D（招 20 名 NLP 博士），30% GTM（日本/SEA），20% GPU。",
+                  "source_tags": [
+                    "Persona_Simulations/CEO_Work_Files/02_Document_Series_B_Pitch_Deck_Draft.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_02",
+                  "level": 4,
+                  "title": "战略退思会备忘录",
+                  "type": "Leaf",
+                  "summary": "讨论 Amoeba 组织架构、日本市场扩张（预算 $2M）、Nexus Agent 产品愿景（会议 AI 助手自动生成 Jira 票）。CEO 自省：微管理过度，需聚焦融资、招聘高管、布道愿景。",
+                  "source_tags": [
+                    "Persona_Simulations/CEO_Work_Files/05_Memo_Strategy_Retreat_Brainstorm.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_03",
+                  "level": 4,
+                  "title": "Q1 OKR 最终复盘",
+                  "type": "Leaf",
+                  "summary": "ARR $2.8M（超额 +12%）。未达目标：仅关闭 3/5 大客户 Pilot，仅招到 2/5 名高级工程师。Q2 北极星指标切换为 NRR 120%，优先修复基础设施而非新功能。",
+                  "source_tags": [
+                    "Persona_Simulations/CEO_Work_Files/07_Document_Q1_OKRs_Final_Review.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_04",
+                  "level": 4,
+                  "title": "TechCloud 战略合作协议草案",
+                  "type": "Leaf",
+                  "summary": "与 TechCloud 在 APAC 联合部署 Active Knowledge Graph。收益分成：TechCloud 20% 软件许可费，Nexus 10% 算力收入。联合营销预算 $50 万。IP 双方各自保留，数据零接触。",
+                  "source_tags": [
+                    "Persona_Simulations/CEO_Work_Files/10_Document_Partnership_Agreement_CloudProvider_Draft.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_02",
+              "level": 3,
+              "title": "投资人视角 · Sequoia 内部决策",
+              "type": "Container",
+              "summary": "Sequoia 合伙人 Mike 的完整投资链路：IC Memo 推荐投资，合伙人会议争论（是否与 Microsoft Graph 重叠），以及 Mike 个人财务危机对决策的隐性驱动。",
+              "source_tags": [
+                "Persona_Simulations/04_Investor_Mike/IC_Memo_Nexus_AI_Series_B.md",
+                "Persona_Simulations/04_Investor_Mike/LP_Annual_Meeting_Speech_Crisis_Mode.md",
+                "Persona_Simulations/04_Investor_Mike/Partner_Meeting_Minutes_March_9.md",
+                "Persona_Simulations/04_Investor_Mike/Personal_Wealth_Management_Plan.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_05",
+                  "level": 4,
+                  "title": "IC Memo · Nexus AI Series B",
+                  "type": "Leaf",
+                  "summary": "推荐投资 $15M（$30M 领投）。核心论点：Active Knowledge Graph 品类定义者，多云+本地部署是护城河（对比 MS Graph 仅限 Office 365）。主要风险：OpenAI Copilot 竞争，$400k/月烧钱率。",
+                  "source_tags": [
+                    "Persona_Simulations/04_Investor_Mike/IC_Memo_Nexus_AI_Series_B.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_06",
+                  "level": 4,
+                  "title": "合伙人周会纪要（2026-03-09）",
+                  "type": "Leaf",
+                  "summary": "Mike 力推 Nexus AI（$200M pre）。Roelof 质疑与 Microsoft Graph 重叠，Mike 回应：Nexus 是多云+本地，MS Graph 仅限 Office 365。同日审议 SpaceX Follow-on $50M（获批）。",
+                  "source_tags": [
+                    "Persona_Simulations/04_Investor_Mike/Partner_Meeting_Minutes_March_9.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_07",
+                  "level": 4,
+                  "title": "LP 年会演讲稿（危机模式）",
+                  "type": "Leaf",
+                  "summary": "应对 FinTech Star 欺诈丑闻：启动独立审计，以 Nexus AI +300%、GenAI Corp 签约 Google 转移焦点。内部备注：不能承认 Series B 跳过 DD。",
+                  "source_tags": [
+                    "Persona_Simulations/04_Investor_Mike/LP_Annual_Meeting_Speech_Crisis_Mode.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_08",
+                  "level": 4,
+                  "title": "Mike 个人财务末日沙盘",
+                  "type": "Leaf",
+                  "summary": "如果被解雇：损失 $1000 万 unvested carry，流动资产仅 $200 万，但每月固定支出：房贷 $8 万 + 赡养费 $2 万 + 私校 $8000。结论：不能失去这份工作，必须击败对手 Doug。",
+                  "source_tags": [
+                    "Persona_Simulations/04_Investor_Mike/Personal_Wealth_Management_Plan.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_03",
+              "level": 3,
+              "title": "法务视角 · IP 风险与尽调",
+              "type": "Container",
+              "summary": "律师 Jessica 在尽调中发现的致命 IP 风险：核心算法由承包商 Rob 在公司成立前编写，无 IP 转让协议，技术产权归属个人。",
+              "source_tags": [
+                "Persona_Simulations/05_Lawyer_Jessica/Due_Diligence_Checklist_LegalGraph.md",
+                "Persona_Simulations/05_Lawyer_Jessica/Legal_Opinion_IP_Risk_Nexus_Deal.md",
+                "Persona_Simulations/05_Lawyer_Jessica/Performance_Review_Self_Assessment.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_09",
+                  "level": 4,
+                  "title": "IP 风险法律意见书（特权文件）",
+                  "type": "Leaf",
+                  "summary": "\"Entity Extraction\" 核心算法的 IP 属承包商 Rob 个人，不在公司名下。属于交易终止级风险。建议：追签 Confirmatory Assignment（倒签至 2024），$500 万托管至签署完成。",
+                  "source_tags": [
+                    "Persona_Simulations/05_Lawyer_Jessica/Legal_Opinion_IP_Risk_Nexus_Deal.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_10",
+                  "level": 4,
+                  "title": "法律尽调清单 · LegalGraph 收购",
+                  "type": "Leaf",
+                  "summary": "涵盖公司治理、IP 分配（CRITICAL：Rob 的承包合同）、劳动合同、未决诉讼、GDPR 合规。IP Assignment 条目被标为最高优先级。",
+                  "source_tags": [
+                    "Persona_Simulations/05_Lawyer_Jessica/Due_Diligence_Checklist_LegalGraph.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_11",
+                  "level": 4,
+                  "title": "Jessica 合伙人晋升自评",
+                  "type": "Leaf",
+                  "summary": "2800 计费小时（团队最高），创收 $350 万。主导 Nexus Series B 尽调，TechCorp 并购中发现 $1000 万税务节省。自评弱点：需要更有攻击性，停止做\"好律师\"。",
+                  "source_tags": [
+                    "Persona_Simulations/05_Lawyer_Jessica/Performance_Review_Self_Assessment.md"
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "L2_02",
+          "level": 2,
+          "title": "CloudMap · Series C 战略转型",
+          "type": "Container",
+          "summary": "自动驾驶公司 CloudMap 的 $80M C 轮融资全程记录。核心事件：Robotaxi→物流的战略转型，CTO 张博的留任博弈，顺丰 LOI 签署（500 台），最终以 $720M（低于 B 轮 $800M）完成融资。10 份文件构成一条完整的创业危机决策时间线。",
+          "source_tags": [
+            "Persona_Simulations/11_CEO_Li_CloudMap/02_Doc_Series_C_Pitch_Deck_v2.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/03_Memo_Personal_Strategy.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/04_Doc_Cost_Reduction_Meeting.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/06_Doc_Government_License_Request.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/07_Memo_Personal_Strategy_v2.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/09_Doc_Valuation_Crisis_Meeting.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/10_Doc_Cost_Reduction_Update.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/11_Doc_Series_C_Pitch_Deck_v3.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/13_Doc_Term_Sheet_Analysis.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/14_Email_All_Hands_Pivot.md",
+            "Persona_Simulations/11_CEO_Li_CloudMap/15_Memo_Personal_Strategy_v3.md"
+          ],
+          "children": [
+            {
+              "id": "L3_04",
+              "level": 3,
+              "title": "战略转型决策链",
+              "type": "Container",
+              "summary": "CEO 李总三个版本的个人战略备忘录，记录从迷茫到决断的完整思考过程。",
+              "source_tags": [
+                "Persona_Simulations/11_CEO_Li_CloudMap/03_Memo_Personal_Strategy.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/07_Memo_Personal_Strategy_v2.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/15_Memo_Personal_Strategy_v3.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_12",
+                  "level": 4,
+                  "title": "个人战略备忘 v1 · 三选一困境",
+                  "type": "Leaf",
+                  "summary": "账上现金仅够 7 个月。三个选项：A 保守（全力押注 Robotaxi）、B 激进（全转物流）、C 折中（双线并行）。关键筹码：必须拿下顺丰 500 台意向订单。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/03_Memo_Personal_Strategy.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_13",
+                  "level": 4,
+                  "title": "个人战略备忘 v2 · C 轮前夜",
+                  "type": "Leaf",
+                  "summary": "与 CTO 张博激烈冲突（\"技术信仰\" vs \"商业落地\"）。决策：All-in 物流，Robotaxi 只保留 10 人核心组。承诺 C 轮后拨款 ¥2000 万给张博做预研。风险：张博离职后代码归属。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/07_Memo_Personal_Strategy_v2.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_14",
+                  "level": 4,
+                  "title": "个人战略备忘 v3 · 闭环复盘",
+                  "type": "Leaf",
+                  "summary": "顺丰 LOI 签署（500 台），Sequoia TS 签署（$720M）。张博留任首席科学家（不开心但在岗）。下一步：路测牌照（仍在跟进）、9 月量产 100 台、科创板选项。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/15_Memo_Personal_Strategy_v3.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_05",
+              "level": 3,
+              "title": "Pitch 材料迭代",
+              "type": "Container",
+              "summary": "两版 Pitch Deck 反映战略演进：v2 是\"Robotaxi→物流\"叙事，v3 是顺丰 LOI 签署后的\"Logistics First\"终版。",
+              "source_tags": [
+                "Persona_Simulations/11_CEO_Li_CloudMap/02_Doc_Series_C_Pitch_Deck_v2.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/11_Doc_Series_C_Pitch_Deck_v3.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_15",
+                  "level": 4,
+                  "title": "Series C Pitch Deck v2",
+                  "type": "Leaf",
+                  "summary": "定位：\"城市物流操作系统\"。当前里程：120 万公里 L4 自动驾驶。核心痛点：硬件 BOM ¥25 万/台，目标 ¥10 万/台。融资额：$1 亿。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/02_Doc_Series_C_Pitch_Deck_v2.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_16",
+                  "level": 4,
+                  "title": "Series C Pitch Deck v3（终版）",
+                  "type": "Leaf",
+                  "summary": "\"Logistics First, Robotaxi Next\"。顺丰 LOI 500 台（合同金额 ¥5000 万）。BOM 降至 ¥9.8 万/台（1000 台规模）。融资额：$8000 万。月烧钱 $500 万→$300 万。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/11_Doc_Series_C_Pitch_Deck_v3.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_06",
+              "level": 3,
+              "title": "估值谈判与 Term Sheet",
+              "type": "Container",
+              "summary": "Sequoia Mike 初始要求砍价 20%（$10 亿→$6.4 亿），CEO 以顺丰订单为底牌抗议，最终落在 $7.2 亿。",
+              "source_tags": [
+                "Persona_Simulations/11_CEO_Li_CloudMap/09_Doc_Valuation_Crisis_Meeting.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/13_Doc_Term_Sheet_Analysis.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_17",
+                  "level": 4,
+                  "title": "估值危机紧急会议",
+                  "type": "Leaf",
+                  "summary": "B 轮投后 $8 亿，Mike 要求 C 轮降至 $6.4 亿。三个应对：接受（快速拿钱）、硬抗（赌顺丰订单）、找新投资人（时间不够）。决定：必须拿下顺丰 500 台意向书，目标谈回 $8 亿平轮。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/09_Doc_Valuation_Crisis_Meeting.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_18",
+                  "level": 4,
+                  "title": "Sequoia Term Sheet 条款分析",
+                  "type": "Leaf",
+                  "summary": "Pre-money $7.2 亿（比 B 轮降 10%），融资额 $5000 万，期权池扩至 20%（稀释性）。Board：Sequoia（Mike）+1 新独立董事。CEO 注：$720M painful but better than $640M，周五前必须签。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/13_Doc_Term_Sheet_Analysis.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_07",
+              "level": 3,
+              "title": "运营执行",
+              "type": "Container",
+              "summary": "降本攻坚（¥25 万→¥9.8 万/台）、政府路测牌照公关、全员转型公告。",
+              "source_tags": [
+                "Persona_Simulations/11_CEO_Li_CloudMap/04_Doc_Cost_Reduction_Meeting.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/06_Doc_Government_License_Request.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/10_Doc_Cost_Reduction_Update.md",
+                "Persona_Simulations/11_CEO_Li_CloudMap/14_Email_All_Hands_Pivot.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_19",
+                  "level": 4,
+                  "title": "降本会议纪要（第一轮）",
+                  "type": "Leaf",
+                  "summary": "BOM ¥25 万→¥10 万目标，Gap ¥15 万。关键动作：算法剪枝（4 颗 Orin→1 颗），激光雷达从 3 颗改为纯视觉替代，自研底盘，换电模式。CTO 张博评价：\"倒退 3 年\"。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/04_Doc_Cost_Reduction_Meeting.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_20",
+                  "level": 4,
+                  "title": "降本进展更新（BOM Update）",
+                  "type": "Leaf",
+                  "summary": "最新单价 ¥12 万（从 ¥25 万）。再砍 ¥2 万措施：Hesai AT128 替代 Velodyne，国产转向电机替换进口，电池改租赁模式（Capex→Opex）。1000 台规模效应下可达 ¥9.8 万/台。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/10_Doc_Cost_Reduction_Update.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_21",
+                  "level": 4,
+                  "title": "政府路测牌照沟通纪要",
+                  "type": "Leaf",
+                  "summary": "申请亦庄全域开放测试（含晚高峰）。政府反馈：竞品事故导致审查趋严，要求实时数据接入监管平台，拒绝高峰期测试。应对：错峰承诺（10:00-16:00, 20:00-06:00）+ 保额提升至 ¥500 万/辆。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/06_Doc_Government_License_Request.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_22",
+                  "level": 4,
+                  "title": "全员战略转型邮件",
+                  "type": "Leaf",
+                  "summary": "官宣：从\"Robotaxi First\"转向\"Logistics First\"。成立物流事业部（老周任 GM），原算法部升级为前瞻研究院（张博任首席科学家）。目标：年底交付 1000 台，2027 年现金流转正。",
+                  "source_tags": [
+                    "Persona_Simulations/11_CEO_Li_CloudMap/14_Email_All_Hands_Pivot.md"
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1_02",
+      "level": 1,
+      "title": "产品研发与技术",
+      "type": "Container",
+      "summary": "Nexus AI 的产品和工程侧视角。工程师 Dave 与 VP Kevin 的技术路线之争（Python vs Rust）贯穿多份文档，PM Kevin 主导 Mobile App v2 产品决策，两者都指向同一个客户问题：GlobalBank 的稳定性要求。知识库 PRD 和 AI 组织 Prompt 是整个 Vault 的元层文档。",
+      "source_tags": [
+        "Knowledge_Base_Organization_Prompt.md",
+        "Knowledge_Base_Organization_Prompt_V2.md",
+        "Persona_Simulations/01_Developer_Dave/Architecture_Defense_Python_vs_Rust.md",
+        "Persona_Simulations/01_Developer_Dave/Code_Review_Notes_Security.md",
+        "Persona_Simulations/01_Developer_Dave/Final_Decision_Stay_or_Go.md",
+        "Persona_Simulations/01_Developer_Dave/Incident_Postmortem_GlobalBank_Outage.md",
+        "Persona_Simulations/01_Developer_Dave/RFC_Vector_Search_Optimization.md",
+        "Persona_Simulations/13_PM_Kevin/01_PRD_Mobile_App_v2.md",
+        "Persona_Simulations/13_PM_Kevin/03_User_Research_Interview_Notes.md",
+        "Persona_Simulations/13_PM_Kevin/04_Excel_Data_Export_DAU.md",
+        "Persona_Simulations/13_PM_Kevin/05_Jira_Ticket_Export_Bug.md",
+        "Persona_Simulations/13_PM_Kevin/08_Note_SQL_Self_Learning.md",
+        "Persona_Simulations/13_PM_Kevin/11_Reading_Notes_Product_Methodology.md",
+        "Persona_Simulations/13_PM_Kevin/14_Weekly_Report_W12.md",
+        "Product_PRD_Knowledge_Base_v2_FINAL.md"
+      ],
+      "children": [
+        {
+          "id": "L2_03",
+          "level": 2,
+          "title": "工程团队 · Developer Dave",
+          "type": "Container",
+          "summary": "首席工程师 Dave 的工作记录。技术上推动 HNSW 向量搜索优化，力阻 Rust 重写；人事上正在考虑离职，去留取决于 CEO 是否在 Rust 争论中支持他。",
+          "source_tags": [
+            "Persona_Simulations/01_Developer_Dave/Architecture_Defense_Python_vs_Rust.md",
+            "Persona_Simulations/01_Developer_Dave/Code_Review_Notes_Security.md",
+            "Persona_Simulations/01_Developer_Dave/Final_Decision_Stay_or_Go.md",
+            "Persona_Simulations/01_Developer_Dave/Incident_Postmortem_GlobalBank_Outage.md",
+            "Persona_Simulations/01_Developer_Dave/RFC_Vector_Search_Optimization.md"
+          ],
+          "children": [
+            {
+              "id": "L3_08",
+              "level": 3,
+              "title": "技术债与架构决策",
+              "type": "Container",
+              "summary": "搜索延迟瓶颈（P99 4000ms）的根因分析与解决方案，以及 Python vs Rust 技术路线争论。",
+              "source_tags": [
+                "Persona_Simulations/01_Developer_Dave/Architecture_Defense_Python_vs_Rust.md",
+                "Persona_Simulations/01_Developer_Dave/RFC_Vector_Search_Optimization.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_23",
+                  "level": 4,
+                  "title": "RFC：向量搜索优化方案",
+                  "type": "Leaf",
+                  "summary": "根因：后过滤导致大租户（GlobalBank）全表扫描（4000ms P99）。方案：改为预过滤 + HNSW 索引 + TenantID 分区键，预计搜索空间缩小 99%。风险：重建索引需 48 小时宕机窗口，内存峰值 +20%。",
+                  "source_tags": [
+                    "Persona_Simulations/01_Developer_Dave/RFC_Vector_Search_Optimization.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_24",
+                  "level": 4,
+                  "title": "架构辩护：为什么 Python 够用",
+                  "type": "Leaf",
+                  "summary": "延迟 80% 来自 DB 等待，只有 5% 是应用逻辑，Rust 只优化那 5%。方案：Python 控制面 + Rust 热路径（PyO3 扩展），先做 Log Ingestor POC 验证。反对理由：Rust 工程师招聘周期 3 个月，Python 2 周。",
+                  "source_tags": [
+                    "Persona_Simulations/01_Developer_Dave/Architecture_Defense_Python_vs_Rust.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_09",
+              "level": 3,
+              "title": "事故与安全",
+              "type": "Container",
+              "summary": "GlobalBank P0 事故复盘及代码安全审查，两者都与 GlobalBank 安全审计直接相关。",
+              "source_tags": [
+                "Persona_Simulations/01_Developer_Dave/Code_Review_Notes_Security.md",
+                "Persona_Simulations/01_Developer_Dave/Incident_Postmortem_GlobalBank_Outage.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_25",
+                  "level": 4,
+                  "title": "GlobalBank P0 事故复盘",
+                  "type": "Leaf",
+                  "summary": "宕机 4 小时 23 分。根因双重：Python 向量引擎内存泄漏（>1 万结果时不释放）+ 无查询限制（允许全向量空间扫描）。修复：添加查询限制器 + 强制元数据过滤。",
+                  "source_tags": [
+                    "Persona_Simulations/01_Developer_Dave/Incident_Postmortem_GlobalBank_Outage.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_26",
+                  "level": 4,
+                  "title": "代码审查：安全漏洞（PR #142）",
+                  "type": "Leaf",
+                  "summary": "JWT 存储在 LocalStorage → XSS 攻击可窃取 token。要求改为 HttpOnly Cookie + SameSite=Strict。紧急原因：明天 GlobalBank 安全审计开始。",
+                  "source_tags": [
+                    "Persona_Simulations/01_Developer_Dave/Code_Review_Notes_Security.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L4_27",
+              "level": 4,
+              "title": "去留决策矩阵",
+              "type": "Leaf",
+              "summary": "留：IPO 期权价值 $500 万+，但 Kevin 难共事，GlobalBank 事故损耗极大。走：Google L6 $500k+ TC，但成为螺丝钉。决定：给 CEO 最后一次机会，若支持 Rust 重写则立刻离职。",
+              "source_tags": [
+                "Persona_Simulations/01_Developer_Dave/Final_Decision_Stay_or_Go.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_04",
+          "level": 2,
+          "title": "产品团队 · PM Kevin（工作）",
+          "type": "Container",
+          "summary": "PM Kevin 的核心任务：将 App Store 评分从 2.5 星提升到 4.5 星。用户调研揭示过度设计问题（Save 按钮被藏起来），DAU 数据显示留存危机（粘性仅 15%），GlobalBank PDF 导出是最紧急的 P0 Bug。",
+          "source_tags": [
+            "Persona_Simulations/13_PM_Kevin/01_PRD_Mobile_App_v2.md",
+            "Persona_Simulations/13_PM_Kevin/03_User_Research_Interview_Notes.md",
+            "Persona_Simulations/13_PM_Kevin/04_Excel_Data_Export_DAU.md",
+            "Persona_Simulations/13_PM_Kevin/05_Jira_Ticket_Export_Bug.md",
+            "Persona_Simulations/13_PM_Kevin/08_Note_SQL_Self_Learning.md",
+            "Persona_Simulations/13_PM_Kevin/11_Reading_Notes_Product_Methodology.md",
+            "Persona_Simulations/13_PM_Kevin/14_Weekly_Report_W12.md"
+          ],
+          "children": [
+            {
+              "id": "L3_10",
+              "level": 3,
+              "title": "产品规划与方法论",
+              "type": "Container",
+              "summary": "Mobile App v2 PRD、用户调研洞察、产品方法论读书笔记。",
+              "source_tags": [
+                "Persona_Simulations/13_PM_Kevin/01_PRD_Mobile_App_v2.md",
+                "Persona_Simulations/13_PM_Kevin/03_User_Research_Interview_Notes.md",
+                "Persona_Simulations/13_PM_Kevin/11_Reading_Notes_Product_Methodology.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_28",
+                  "level": 4,
+                  "title": "PRD · Mobile App v2.0",
+                  "type": "Leaf",
+                  "summary": "目标：App Store 2.5→4.5 星。核心功能：离线模式（销售人员刚需）、推送通知、生物识别登录。阻塞：Rust API 未就绪（mocking data），暗黑模式被 GlobalBank 高管嫌弃。修订时间线：Alpha 4/15，Launch 6/1。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/01_PRD_Mobile_App_v2.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_29",
+                  "level": 4,
+                  "title": "用户研究访谈纪要",
+                  "type": "Leaf",
+                  "summary": "45 岁会计用户：Save 按钮藏在三点菜单（可发现性失败），字体太灰（可读性失败），CSV 导出日期格式乱码（功能失败）。结论：设计师把\"简洁\"凌驾于\"实用\"之上。行动：下个 Sprint 恢复显式 Save 按钮。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/03_User_Research_Interview_Notes.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_30",
+                  "level": 4,
+                  "title": "读书笔记：俞军产品方法论",
+                  "type": "Leaf",
+                  "summary": "核心公式：产品价值 = (新体验 - 旧体验) - 替换成本。思考：Mobile App 相比 Web，新体验是否有质的飞跃？设计评审行动项：\"这个改动值得用户重新学习吗？\"",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/11_Reading_Notes_Product_Methodology.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_11",
+              "level": 3,
+              "title": "数据监控与问题处理",
+              "type": "Container",
+              "summary": "Q1 DAU 数据显示留存危机，GlobalBank PDF 导出 P0 Bug 仍靠临时方案支撑。",
+              "source_tags": [
+                "Persona_Simulations/13_PM_Kevin/04_Excel_Data_Export_DAU.md",
+                "Persona_Simulations/13_PM_Kevin/05_Jira_Ticket_Export_Bug.md",
+                "Persona_Simulations/13_PM_Kevin/08_Note_SQL_Self_Learning.md",
+                "Persona_Simulations/13_PM_Kevin/14_Weekly_Report_W12.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_31",
+                  "level": 4,
+                  "title": "Q1 DAU 数据导出（Amplitude）",
+                  "type": "Leaf",
+                  "summary": "W3 服务器事故 DAU 跌至 1.02 万（-11%）。粘性（DAU/MAU）仅 15%，目标 20%。用户登录后只做一件事就离开，未形成探索习惯。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/04_Excel_Data_Export_DAU.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_32",
+                  "level": 4,
+                  "title": "Jira P0：GlobalBank PDF 导出超时",
+                  "type": "Leaf",
+                  "summary": "500 页年度风险报告导出时 Nginx 504 超时。根因：Python worker RAM 耗尽，需流式响应而非增大超时。Dave 已离职，票据无人认领。临时方案：Lisa 将 worker 内存限至 8GB（治标）。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/05_Jira_Ticket_Export_Bug.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_33",
+                  "level": 4,
+                  "title": "W12 周报",
+                  "type": "Leaf",
+                  "summary": "完成 v3.1 PRD 评审，GlobalBank PDF 问题临时解决，SQL 学习笔记准备分享。风险：移动端开发人手不足，可能延期。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/14_Weekly_Report_W12.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_34",
+                  "level": 4,
+                  "title": "SQL 自学笔记",
+                  "type": "Leaf",
+                  "summary": "目标：不再找研发要数据，自己写 SQL 跑 DAU 周报。掌握：SELECT/WHERE、INNER JOIN / LEFT JOIN、COUNT DISTINCT、AVG。下周实战：自己跑数据报表，惊艳团队。",
+                  "source_tags": [
+                    "Persona_Simulations/13_PM_Kevin/08_Note_SQL_Self_Learning.md"
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "L2_05",
+          "level": 2,
+          "title": "知识库系统设计文档",
+          "type": "Container",
+          "summary": "Even AI 知识库产品的核心设计文档。PRD 定义了\"AI First, Human Confirm\"交互范式，AI Prompt 实现了最多 5 层的自适应知识图谱构建逻辑。这两份 Prompt 正是生成本图谱所使用的规则引擎。",
+          "source_tags": [
+            "Knowledge_Base_Organization_Prompt.md",
+            "Knowledge_Base_Organization_Prompt_V2.md",
+            "Product_PRD_Knowledge_Base_v2_FINAL.md"
+          ],
+          "children": [
+            {
+              "id": "L4_35",
+              "level": 4,
+              "title": "知识库产品 PRD v2",
+              "type": "Leaf",
+              "summary": "核心价值：将被动输入（对话/文件/会议）转化为结构化主动资产。功能：AI 自适应分级（最深 5 层）、来源溯源、对话式校准、后台无感生长。生态集成：Conversate（实时会议助手）+ Even AI（异步对话）+ 全局搜索。",
+              "source_tags": [
+                "Product_PRD_Knowledge_Base_v2_FINAL.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_36",
+              "level": 4,
+              "title": "AI 组织 Prompt V1",
+              "type": "Leaf",
+              "summary": "Architect 角色定义：基于内容密度和语义上下文构建层级知识图谱。核心规则：L1 永恒领域，L2 重要实体，L3-L5 自适应分解。叶子节点必须包含不可分割的原子事实，所有节点必须有 source_tags。",
+              "source_tags": [
+                "Knowledge_Base_Organization_Prompt.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_37",
+              "level": 4,
+              "title": "AI 组织 Prompt V2",
+              "type": "Leaf",
+              "summary": "升级版 Prompt，新增规则：容器节点摘要必须包含子节点内容预览（bullet points），明确分支粒度规则，强制要求叶子节点 source_tags 不得省略。",
+              "source_tags": [
+                "Knowledge_Base_Organization_Prompt_V2.md"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1_03",
+      "level": 1,
+      "title": "企业管理与人才",
+      "type": "Container",
+      "summary": "Nexus AI HR 总监 Sarah 的管理工作全貌：混合办公政策推行（员工 70% 反对），Q1 绩效校准（S 级比例严重超标），PIP 模板，AI 工程师招聘，以及一起性骚扰调查处理。",
+      "source_tags": [
+        "Persona_Simulations/12_HR_Sarah/01_Policy_Draft_Hybrid_Work.md",
+        "Persona_Simulations/12_HR_Sarah/03_Meeting_Notes_Performance_Calibration.md",
+        "Persona_Simulations/12_HR_Sarah/05_Doc_PIP_Plan_Template.md",
+        "Persona_Simulations/12_HR_Sarah/06_Excel_Q2_Budget_Draft.md",
+        "Persona_Simulations/12_HR_Sarah/08_Job_Description_AI_Engineer.md",
+        "Persona_Simulations/12_HR_Sarah/11_Survey_Results_RTO.md",
+        "Persona_Simulations/12_HR_Sarah/13_Doc_Investigation_Log_SH.md"
+      ],
+      "children": [
+        {
+          "id": "L2_06",
+          "level": 2,
+          "title": "HR 总监 · Sarah",
+          "type": "Container",
+          "summary": "制度建设（3+2 混合办公）与人员管理（绩效校准、PIP、招聘预算）并行，同时处理一起 KTV 晚宴性骚扰事件。",
+          "source_tags": [
+            "Persona_Simulations/12_HR_Sarah/01_Policy_Draft_Hybrid_Work.md",
+            "Persona_Simulations/12_HR_Sarah/03_Meeting_Notes_Performance_Calibration.md",
+            "Persona_Simulations/12_HR_Sarah/05_Doc_PIP_Plan_Template.md",
+            "Persona_Simulations/12_HR_Sarah/06_Excel_Q2_Budget_Draft.md",
+            "Persona_Simulations/12_HR_Sarah/08_Job_Description_AI_Engineer.md",
+            "Persona_Simulations/12_HR_Sarah/11_Survey_Results_RTO.md",
+            "Persona_Simulations/12_HR_Sarah/13_Doc_Investigation_Log_SH.md"
+          ],
+          "children": [
+            {
+              "id": "L3_12",
+              "level": 3,
+              "title": "混合办公政策",
+              "type": "Container",
+              "summary": "推行\"3+2\"模式（周一/二/四强制到岗，周三/五弹性）。背景：出勤率仅 40%，CEO 要求全员回归，员工调查 70% 反对。",
+              "source_tags": [
+                "Persona_Simulations/12_HR_Sarah/01_Policy_Draft_Hybrid_Work.md",
+                "Persona_Simulations/12_HR_Sarah/11_Survey_Results_RTO.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_38",
+                  "level": 4,
+                  "title": "3+2 混合办公政策草案 v1",
+                  "type": "Leaf",
+                  "summary": "规则：每周 3 天强制到岗，2 天弹性远程。成本收益：共享工位退租一层，年省 ¥300 万。阻力：研发部强烈反对（在家写代码效率更高）。时间表：4/1 公告，5/1 正式执行。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/01_Policy_Draft_Hybrid_Work.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_39",
+                  "level": 4,
+                  "title": "RTO 员工意愿调查报告",
+                  "type": "Leaf",
+                  "summary": "90% 参与率，70% 反对回归。核心抱怨：平均通勤 1.5 小时、开放办公室噪声、COVID/流感风险。代表性评论：\"5 天坐班是坐牢\"。建议：推行 3+2，绝不尝试 5+0 全员到岗。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/11_Survey_Results_RTO.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_13",
+              "level": 3,
+              "title": "绩效管理",
+              "type": "Container",
+              "summary": "Q1 绩效校准：S 级 35%（目标 15%），C 级 2%（目标 10%）。市场部全员 A+ 需纠偏，PIP 模板备用。",
+              "source_tags": [
+                "Persona_Simulations/12_HR_Sarah/03_Meeting_Notes_Performance_Calibration.md",
+                "Persona_Simulations/12_HR_Sarah/05_Doc_PIP_Plan_Template.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_40",
+                  "level": 4,
+                  "title": "Q1 绩效校准会议纪要",
+                  "type": "Leaf",
+                  "summary": "全公司 S 级 35%（目标 15%）严重超标，C 级仅 2%（目标 10%）。问题部门：市场部全员 A+，总监理由\"大家都辛苦\"（需强制出 2 个 C）。特殊案例：技术强但骂人的研发李某降 B；孕期员工受法律保护不得打 C。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/03_Meeting_Notes_Performance_Calibration.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_41",
+                  "level": 4,
+                  "title": "PIP 绩效改进计划模板",
+                  "type": "Leaf",
+                  "summary": "30 天改进期，对象：迟交 2 周+Figma 文件混乱+迟到的产品设计师。目标：按时交付、清理设计系统、全勤。4/30 前不达标则终止合同。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/05_Doc_PIP_Plan_Template.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L3_14",
+              "level": 3,
+              "title": "招聘与预算",
+              "type": "Container",
+              "summary": "Q2 HR 预算草案（CFO 要求削减 10%）和 AI 工程师招聘需求，对应 Q1 OKR 中未完成的高级工程师招聘目标。",
+              "source_tags": [
+                "Persona_Simulations/12_HR_Sarah/06_Excel_Q2_Budget_Draft.md",
+                "Persona_Simulations/12_HR_Sarah/08_Job_Description_AI_Engineer.md"
+              ],
+              "children": [
+                {
+                  "id": "L4_42",
+                  "level": 4,
+                  "title": "高级 AI 算法工程师 JD",
+                  "type": "Leaf",
+                  "summary": "要求：5 年+ NLP/推荐经验，PyTorch/CUDA，有大模型商业落地经验（非 Demo）。薪资：¥6-9 万/月，北京 Hybrid。用人经理备注：不要培训班出身，字节跳动候选人核实真实水平。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/08_Job_Description_AI_Engineer.md"
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "L4_43",
+                  "level": 4,
+                  "title": "HR Q2 预算草案",
+                  "type": "Leaf",
+                  "summary": "招聘：¥70 万（LinkedIn ¥15 万 + 猎头 ¥50 万 + 校招 ¥5 万）。文化：团队建设 ¥10 万，生日礼物 ¥2.5 万，下午茶已取消。培训：管理工作坊 ¥8 万 + Udemy ¥12 万。CFO 要求削减 10%，考虑团建从 ¥200→¥100/人。",
+                  "source_tags": [
+                    "Persona_Simulations/12_HR_Sarah/06_Excel_Q2_Budget_Draft.md"
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "L4_44",
+              "level": 4,
+              "title": "性骚扰调查日志（机密）SH-2026-003",
+              "type": "Leaf",
+              "summary": "Sales Director Bob 在 Q1 庆功 KTV 晚宴中对 Sales Support Alice 不当触碰。关键证据：凌晨 2 点发\"You looked sexy tonight\"微信消息。Bob 否认并称 Alice 业绩差是报复。结论：书面警告 + 强制培训，将 Alice 调换至不同团队。",
+              "source_tags": [
+                "Persona_Simulations/12_HR_Sarah/13_Doc_Investigation_Log_SH.md"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1_04",
+      "level": 1,
+      "title": "内容创作与创意产业",
+      "type": "Container",
+      "summary": "三个创意从业者的工作档案：科技 KOL Marques（18.5M 订阅者）、剧集导演张（被金主强制加戏）、室内设计师 Chloe（计划从 ¥300→¥500/㎡ 涨价）。共同主题：创作完整性与商业压力的角力，以及在内容形态变迁中的适应与倦怠。",
+      "source_tags": [
+        "Persona_Simulations/02_TechKOL_Marques/Analytics_Review_Mar2026.md",
+        "Persona_Simulations/02_TechKOL_Marques/Idea_Board_TikTok_Pivot.md",
+        "Persona_Simulations/02_TechKOL_Marques/Journal_Burnout_Reflection.md",
+        "Persona_Simulations/02_TechKOL_Marques/Script_AI_Phone_Review.md",
+        "Persona_Simulations/02_TechKOL_Marques/Script_Apology_Video_AI_Pin.md",
+        "Persona_Simulations/09_Director_Zhang/Edit_Notes_EP05.md",
+        "Persona_Simulations/09_Director_Zhang/Script_Revision_Add_Scene_For_Actress.md",
+        "Persona_Simulations/15_Designer_Chloe/01_Moodboard_Cafe_Project.md",
+        "Persona_Simulations/15_Designer_Chloe/04_Schedule_Shanghai_Art_Week.md",
+        "Persona_Simulations/15_Designer_Chloe/07_List_IKEA_Shopping.md",
+        "Persona_Simulations/15_Designer_Chloe/11_Contract_Retainer_Draft.md",
+        "Persona_Simulations/15_Designer_Chloe/12_Note_Reading_List.md",
+        "Persona_Simulations/15_Designer_Chloe/14_Excel_Financial_Review_Q1.md"
+      ],
+      "children": [
+        {
+          "id": "L2_07",
+          "level": 2,
+          "title": "科技 KOL · Marques",
+          "type": "Container",
+          "summary": "拥有 18.5M 订阅者的科技创作者。核心困境：长视频流量 YoY -30%，15 人团队薪资压力，AI Pin 欺诈危机，创作热情耗尽。正在向短视频（TikTok）战略性转型。",
+          "source_tags": [
+            "Persona_Simulations/02_TechKOL_Marques/Analytics_Review_Mar2026.md",
+            "Persona_Simulations/02_TechKOL_Marques/Idea_Board_TikTok_Pivot.md",
+            "Persona_Simulations/02_TechKOL_Marques/Journal_Burnout_Reflection.md",
+            "Persona_Simulations/02_TechKOL_Marques/Script_AI_Phone_Review.md",
+            "Persona_Simulations/02_TechKOL_Marques/Script_Apology_Video_AI_Pin.md"
+          ],
+          "children": [
+            {
+              "id": "L4_45",
+              "level": 4,
+              "title": "视频脚本：80% 的 AI 手机在撒谎",
+              "type": "Leaf",
+              "summary": "基准测试结论：只有 Pixel 用 Gemini Nano 做本地处理，iPhone Siri 要求在线，Samsung 仅打开 Gallery 不发邮件。结论：2027 年之前不要为 AI 买手机。赞助商：dBrand。",
+              "source_tags": [
+                "Persona_Simulations/02_TechKOL_Marques/Script_AI_Phone_Review.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_46",
+              "level": 4,
+              "title": "道歉视频脚本：AI Pin 欺诈事件",
+              "type": "Leaf",
+              "summary": "被制造商欺骗：测评的预产品运行定制固件连接背包服务器，量产品严重过热。行动：下架评测视频，退还 $5 万赞助费捐给 EFF，提起诉讼。",
+              "source_tags": [
+                "Persona_Simulations/02_TechKOL_Marques/Script_Apology_Video_AI_Pin.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_47",
+              "level": 4,
+              "title": "3 月 YouTube 数据分析报告",
+              "type": "Leaf",
+              "summary": "818 万播放量（月增 12%），MacBook Pro M5 评测 320 万播放爆款。问题：VR 内容第 6 分钟掉留存（谈话镜头太多，缺 B-roll）。建议：招聘专职 B-roll 摄影师，4 月尝试 YouTube Shorts。",
+              "source_tags": [
+                "Persona_Simulations/02_TechKOL_Marques/Analytics_Review_Mar2026.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_48",
+              "level": 4,
+              "title": "TikTok 短视频转型策略",
+              "type": "Leaf",
+              "summary": "原因：长视频 YoY -30%，Z 世代不再看 20 分钟评测。三种内容形式：15 秒 Tech Roast、30 秒 Does it Suck、60 秒 ASMR 开箱。阻碍：$5 万 RED 摄影机在垂直拍摄中无用武之地，需招懂 Skibidi 梗的 Z 世代剪辑师。",
+              "source_tags": [
+                "Persona_Simulations/02_TechKOL_Marques/Idea_Board_TikTok_Pivot.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_49",
+              "level": 4,
+              "title": "职业倦怠日记（2026-03-15）",
+              "type": "Leaf",
+              "summary": "\"评论说我'落伍了'，他们不知道我 4 年没休假，有 15 个员工要养，工作室租金涨了 20%。每看到新手机就感到疲惫——都是同一块黑色矩形。\"明天还要对着镜头保持高能量：Fake it til you make it。",
+              "source_tags": [
+                "Persona_Simulations/02_TechKOL_Marques/Journal_Burnout_Reflection.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_08",
+          "level": 2,
+          "title": "剧集导演 · 张导",
+          "type": "Container",
+          "summary": "正在后期制作的都市剧《重生之豪门弃少》。两份文件共同揭示创作困境：金主以撤资威胁强制加戏（逻辑崩塌），导演一边吐槽一边妥协。",
+          "source_tags": [
+            "Persona_Simulations/09_Director_Zhang/Edit_Notes_EP05.md",
+            "Persona_Simulations/09_Director_Zhang/Script_Revision_Add_Scene_For_Actress.md"
+          ],
+          "children": [
+            {
+              "id": "L4_50",
+              "level": 4,
+              "title": "EP05 后期剪辑修改意见",
+              "type": "Leaf",
+              "summary": "4 处修改：00:23 加黑屏闪回配心跳声，01:45 钢琴换大提琴（复仇戏氛围），03:10 女二扇巴掌延长至 0.8 秒慢动作，05:55 字幕错误更正。调色：冷色调高级灰，禁止网红风大红大绿。下周二交精剪。",
+              "source_tags": [
+                "Persona_Simulations/09_Director_Zhang/Edit_Notes_EP05.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_51",
+              "level": 4,
+              "title": "剧本修改要求（资方强制）",
+              "type": "Leaf",
+              "summary": "煤老板金主要求：女三（丫鬟角色）增加身世之谜 + 与男主暗昧情感线 + 每集至少 5 个柔光特写。导演手写吐槽：\"逻辑全崩！但不改就撤资。改吧，烂剧就烂剧，赚钱嘛不寒碜。\"",
+              "source_tags": [
+                "Persona_Simulations/09_Director_Zhang/Script_Revision_Add_Scene_For_Actress.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_09",
+          "level": 2,
+          "title": "室内设计师 · Chloe",
+          "type": "Container",
+          "summary": "独立设计师业务现状：Q1 利润 ¥8.3 万，核心项目是上海巨鹿路精品咖啡馆（Wabi-sabi 风格），正在谈科技公司顾问留存合同（被动收入 ¥1 万/月）。计划从 ¥300→¥500/㎡ 涨价。",
+          "source_tags": [
+            "Persona_Simulations/15_Designer_Chloe/01_Moodboard_Cafe_Project.md",
+            "Persona_Simulations/15_Designer_Chloe/04_Schedule_Shanghai_Art_Week.md",
+            "Persona_Simulations/15_Designer_Chloe/07_List_IKEA_Shopping.md",
+            "Persona_Simulations/15_Designer_Chloe/11_Contract_Retainer_Draft.md",
+            "Persona_Simulations/15_Designer_Chloe/12_Note_Reading_List.md",
+            "Persona_Simulations/15_Designer_Chloe/14_Excel_Financial_Review_Q1.md"
+          ],
+          "children": [
+            {
+              "id": "L4_52",
+              "level": 4,
+              "title": "咖啡馆设计情绪板（Sunday Morning）",
+              "type": "Leaf",
+              "summary": "上海巨鹿路精品咖啡馆。风格：Wabi-sabi 极简暖色。材料：微水泥地面（象牙灰）+ 胡桃木桌椅 + 亚麻窗帘。参考：Blue Bottle Kyoto，Arabica %。客户要粉色霓虹灯？坚决拒绝，\"品味不能丢\"。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/01_Moodboard_Cafe_Project.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_53",
+              "level": 4,
+              "title": "顾问留存合同草案",
+              "type": "Leaf",
+              "summary": "科技公司办公室顾问：¥1 万/月，每月最多 10 小时，超时 ¥1500/小时，6 个月合同。备注：被动收入！必须拿下这个合同。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/11_Contract_Retainer_Draft.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_54",
+              "level": 4,
+              "title": "Q1 财务报告",
+              "type": "Leaf",
+              "summary": "收入 ¥12 万（低于去年），工作室租金 ¥3 万，软件订阅 ¥0.5 万，咖啡 ¥0.2 万（太多了！）。净利润 ¥8.3 万。策略：从 ¥300/㎡ 涨至 ¥500/㎡，从初级设计师定价升至高端定价。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/14_Excel_Financial_Review_Q1.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_55",
+              "level": 4,
+              "title": "上海艺术周看展计划",
+              "type": "Leaf",
+              "summary": "11 月 10-12 日：西岸博览会（Gagosian/White Cube 重点），Prada 荣宅\"Paraventi\"展，上海当代艺术馆双年展。餐饮：RAC Bar 午餐 + 甬府晚餐（犒劳自己）。穿搭：全黑 + Margiela Tabi 靴。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/04_Schedule_Shanghai_Art_Week.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_56",
+              "level": 4,
+              "title": "建筑设计书单",
+              "type": "Leaf",
+              "summary": "《皮肤的眼睛》（帕拉斯玛）、《走向新建筑》（勒·柯布西耶）、《阴翳礼赞》（谷崎润一郎）。目标：每晚睡前读一章，不刷手机。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/12_Note_Reading_List.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_57",
+              "level": 4,
+              "title": "IKEA 家庭办公室升级购物清单",
+              "type": "Leaf",
+              "summary": "SKADIS 洞洞板（白，×2）、MARKUS 椅子（灰，需到店试坐）、ALEX 抽屉柜（白）、Fejka 仿真植物（×3，真植物都被养死）。预算 ¥2000。",
+              "source_tags": [
+                "Persona_Simulations/15_Designer_Chloe/07_List_IKEA_Shopping.md"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1_05",
+      "level": 1,
+      "title": "专业领域实践",
+      "type": "Container",
+      "summary": "五个不同行业专业人士的工作记录：心脏科医生（临床病例）、高中物理老师（教研）、建筑师（项目变更与质量事故）、政府招商官员（投资引进）、CS 学术研究者（科研组会与论文审稿）。",
+      "source_tags": [
+        "Persona_Simulations/03_Doctor_Sarah/Discharge_Summary_Baker.md",
+        "Persona_Simulations/03_Doctor_Sarah/Medical_Case_Review_Rare_Condition.md",
+        "Persona_Simulations/07_Architect_Wang/Change_Request_No082.md",
+        "Persona_Simulations/07_Architect_Wang/Site_Report_Leakage_Disaster.md",
+        "Persona_Simulations/08_Teacher_Li/Teaching_Plan_Physics.md",
+        "Persona_Simulations/10_Official_Chen/Mayor_Reception_Plan.md",
+        "Persona_Simulations/10_Official_Chen/Official_Document_Draft_Investment_Plan.md",
+        "Persona_Simulations/10_Official_Chen/Speech_Draft_Leadership_Election.md",
+        "Persona_Simulations/14_Professor_Chen/07_Meeting_Minutes_Group_Meeting.md",
+        "Persona_Simulations/14_Professor_Chen/09_Paper_Review_Comments.md",
+        "Persona_Simulations/14_Professor_Chen/11_CV_Prof_Chen.md",
+        "Persona_Simulations/14_Professor_Chen/13_Travel_Itinerary_ICML.md"
+      ],
+      "children": [
+        {
+          "id": "L2_10",
+          "level": 2,
+          "title": "心脏科医生 · Dr. Sarah",
+          "type": "Container",
+          "summary": "两份临床病例：标准冠脉支架手术出院记录，以及罕见运动员 T 波倒置疑难病例讨论。",
+          "source_tags": [
+            "Persona_Simulations/03_Doctor_Sarah/Discharge_Summary_Baker.md",
+            "Persona_Simulations/03_Doctor_Sarah/Medical_Case_Review_Rare_Condition.md"
+          ],
+          "children": [
+            {
+              "id": "L4_58",
+              "level": 4,
+              "title": "出院记录 · James Baker（不稳定型心绞痛）",
+              "type": "Leaf",
+              "summary": "45 岁男性，RCA 80% 狭窄，植入药物洗脱支架（DES）。出院用药：氯吡格雷 75mg（12 个月，不得停药）+ 阿司匹林 81mg + 他汀 + 利辛普利。生活方式：戒烟、低钠饮食（<2g/天）、每天步行 30 分钟。",
+              "source_tags": [
+                "Persona_Simulations/03_Doctor_Sarah/Discharge_Summary_Baker.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_59",
+              "level": 4,
+              "title": "疑难病例讨论 · 运动员 T 波倒置",
+              "type": "Leaf",
+              "summary": "28 岁马拉松女运动员，睡眠中心悸，V1-V3 深度 T 波倒置，RV 轻度扩张，舅舅 35 岁跑步中猝死（家族史红旗）。高度怀疑 ARVC。立即：心脏 MRI + Desmoplakin 基因检测 + 住院遥测（禁止出院）。",
+              "source_tags": [
+                "Persona_Simulations/03_Doctor_Sarah/Medical_Case_Review_Rare_Condition.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L4_60",
+          "level": 4,
+          "title": "高中物理教研组会议记录",
+          "type": "Leaf",
+          "summary": "高二月考均分 78.5（年级前三）。失分重灾区：实验误差分析（不会图象法求电动势），洛伦兹力 + 重力 + 电场力的复合场大题。措施：前 50 名开竞赛强化班，后 20 名补基础。下阶段：命制期中考试选择题。",
+          "source_tags": [
+            "Persona_Simulations/08_Teacher_Li/Teaching_Plan_Physics.md"
+          ],
+          "children": []
+        },
+        {
+          "id": "L2_12",
+          "level": 2,
+          "title": "建筑师 · 王工（滨江金融中心二期）",
+          "type": "Container",
+          "summary": "同一项目的两份文件构成因果链：覆土加厚变更设计单（No.082）→ 防水取消→ 地下室漏水重大事故。为省造价取消止水带的决策最终酿成 ¥500 万索赔和资质降级风险。",
+          "source_tags": [
+            "Persona_Simulations/07_Architect_Wang/Change_Request_No082.md",
+            "Persona_Simulations/07_Architect_Wang/Site_Report_Leakage_Disaster.md"
+          ],
+          "children": [
+            {
+              "id": "L4_61",
+              "level": 4,
+              "title": "设计变更通知单 No.082",
+              "type": "Leaf",
+              "summary": "覆土厚度 1.2m→1.8m（甲方要求种大乔木）。结构影响：恒载增加 32.4kN/m²，配筋从 Φ20@150 加强至 Φ25@150，梁截面 400×800→500×900。增加造价 ¥200/m²，需重新送审。",
+              "source_tags": [
+                "Persona_Simulations/07_Architect_Wang/Change_Request_No082.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_62",
+              "level": 4,
+              "title": "地下室漏水重大事故报告",
+              "type": "Leaf",
+              "summary": "地下二层车库积水 20cm，3 辆豪车（迈巴赫、宾利）被淹，业主拉横幅维权。根因：变形缝节点取消止水带（为省造价）+ 混凝土振捣不密实（蜂窝麻面）。后果：设计院（王工）面临 ¥500 万索赔 + 资质降级风险。",
+              "source_tags": [
+                "Persona_Simulations/07_Architect_Wang/Site_Report_Leakage_Disaster.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_13",
+          "level": 2,
+          "title": "政府官员 · 陈科长",
+          "type": "Container",
+          "summary": "地方招商引资工作的内外两面：对外是规范的政策文件和市长接待方案，私下是明知\"陪跑\"还是认真写竞聘演讲稿的无奈。",
+          "source_tags": [
+            "Persona_Simulations/10_Official_Chen/Mayor_Reception_Plan.md",
+            "Persona_Simulations/10_Official_Chen/Official_Document_Draft_Investment_Plan.md",
+            "Persona_Simulations/10_Official_Chen/Speech_Draft_Leadership_Election.md"
+          ],
+          "children": [
+            {
+              "id": "L4_63",
+              "level": 4,
+              "title": "2026 年招商引资实施意见（送审稿）",
+              "type": "Leaf",
+              "summary": "目标：外资 +10%，内资 +15%，引进亿元以上项目 50 个（其中 10 亿以上 5 个）。重点产业：新能源汽车、生物医药、新材料。创新招商：驻点招商、云招商、\"拿地即开工\"绿色通道。",
+              "source_tags": [
+                "Persona_Simulations/10_Official_Chen/Official_Document_Draft_Investment_Plan.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_64",
+              "level": 4,
+              "title": "市长接待日对接方案",
+              "type": "Leaf",
+              "summary": "两组重点投资商：新能源汽车电池 PACK 线（投资意向 ¥20 亿）和知名药企二期扩建（需协调 30 亩土地拆迁）。流程：9:00 座谈→11:00 参观高新区展示中心。协调：发改委+经信委+自然资源局现场办公。",
+              "source_tags": [
+                "Persona_Simulations/10_Official_Chen/Mayor_Reception_Plan.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_65",
+              "level": 4,
+              "title": "副局长竞聘演讲稿",
+              "type": "Leaf",
+              "summary": "15 年一线招商经验，引进 3 个 50 亿级大项目，市级劳动模范。私下吐槽（手写备注）：\"这稿太四平八稳了。但听说组织部内定的是隔壁县的王局，我就是个陪跑的。\"",
+              "source_tags": [
+                "Persona_Simulations/10_Official_Chen/Speech_Draft_Leadership_Election.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_14",
+          "level": 2,
+          "title": "CS 学术研究者 · 陈教授",
+          "type": "Container",
+          "summary": "清华 CS 副教授的工作档案：主持研究生组会、审稿 ICLR 论文（建议拒绝），即将在 ICML 维也纳做口头报告。个人生活：应对脂肪肝、西藏摄影旅行。",
+          "source_tags": [
+            "Persona_Simulations/14_Professor_Chen/07_Meeting_Minutes_Group_Meeting.md",
+            "Persona_Simulations/14_Professor_Chen/09_Paper_Review_Comments.md",
+            "Persona_Simulations/14_Professor_Chen/11_CV_Prof_Chen.md",
+            "Persona_Simulations/14_Professor_Chen/13_Travel_Itinerary_ICML.md"
+          ],
+          "children": [
+            {
+              "id": "L4_66",
+              "level": 4,
+              "title": "个人学术简历（CV）",
+              "type": "Leaf",
+              "summary": "清华大学博士（2018），浙江大学学士（2013）。代表作：\"Efficient Transformers\"（NeurIPS 2024，500+ 引用），\"Adversarial Robustness in CV\"（CVPR 2025）。服务：AAAI 2026 Area Chair，JMLR 审稿人。青年学者奖 2025。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/11_CV_Prof_Chen.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_67",
+              "level": 4,
+              "title": "研究生组会纪要（2026-03-24）",
+              "type": "Leaf",
+              "summary": "张三（博一）复现 DeepMind 论文，Loss 不收敛（建议检查 LR Scheduler）。李四（研二）数据集乱码（推荐 ftfy 库）。王五（研一）还在看 PyTorch 教程（要求立刻动手写 MNIST 分类器）。全员作业：阅读 GPT-5 Technical Report。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/07_Meeting_Minutes_Group_Meeting.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_68",
+              "level": 4,
+              "title": "ICLR 2027 论文审稿意见",
+              "type": "Leaf",
+              "summary": "论文 ID 402，题目\"SuperAttention\"，建议：拒绝。原因：数学上等价于 2020 年\"Linear Attention\"（只是改了变量名）。实验仅在 CIFAR-10 上验证（2027 年应使用 ImageNet/LAION）。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/09_Paper_Review_Comments.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_69",
+              "level": 4,
+              "title": "ICML 学术会议行程（维也纳，2026 年 7 月）",
+              "type": "Leaf",
+              "summary": "航班：北京→维也纳（国航 CA841）。酒店：维也纳希尔顿广场（¥1500/晚，超标 ¥300 需特批）。Day 2 14:00 Hall B 口头报告。提醒：带转换插头，给学生买莫扎特巧克力。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/13_Travel_Itinerary_ICML.md"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L1_06",
+      "level": 1,
+      "title": "个人生活与成长",
+      "type": "Container",
+      "summary": "跨角色的私人生活片段：电商林总的税务危机、PM Kevin 的装修存钱与露营、陈教授的健身计划与偶遇前女友的日记。共同主题：在高压职业生涯之外维持真实生活，以及通过个人叙事传递人物温度。",
+      "source_tags": [
+        "Persona_Simulations/06_Ecommerce_Lin/Strategy_Memo_Q3.md",
+        "Persona_Simulations/06_Ecommerce_Lin/Tax_Audit_Notice.md",
+        "Persona_Simulations/13_PM_Kevin/06_Memo_Camping_Checklist.md",
+        "Persona_Simulations/13_PM_Kevin/07_Excel_Renovation_Budget.md",
+        "Persona_Simulations/13_PM_Kevin/12_Excel_Personal_Finance_Plan.md",
+        "Persona_Simulations/14_Professor_Chen/04_Photography_Trip_Plan_Tibet.md",
+        "Persona_Simulations/14_Professor_Chen/09_Fitness_Plan.md",
+        "Persona_Simulations/14_Professor_Chen/12_Diary_Personal_Reflection.md"
+      ],
+      "children": [
+        {
+          "id": "L2_15",
+          "level": 2,
+          "title": "电商主播 · 林总",
+          "type": "Container",
+          "summary": "女装电商创业者，Q3 选品战略转型（从低价到品质）与税务稽查补缴 ¥120 万同期叠加，现金流极度紧张。",
+          "source_tags": [
+            "Persona_Simulations/06_Ecommerce_Lin/Strategy_Memo_Q3.md",
+            "Persona_Simulations/06_Ecommerce_Lin/Tax_Audit_Notice.md"
+          ],
+          "children": [
+            {
+              "id": "L4_70",
+              "level": 4,
+              "title": "Q3 选品策略调整备忘录",
+              "type": "Leaf",
+              "summary": "问题：退货率高（防晒衣事件）+ 供应链品控差。转型：砍掉 ¥29.9 元以下引流款，主推 ¥199 美利奴羊毛衫（核心卖点：机洗不缩水）。供应商对赌：次品率 >1% 罚款货值 30%。现金流：必须双 11 前清仓夏款。",
+              "source_tags": [
+                "Persona_Simulations/06_Ecommerce_Lin/Strategy_Memo_Q3.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_71",
+              "level": 4,
+              "title": "税务自查通知书",
+              "type": "Leaf",
+              "summary": "杭州税务局稽查：2024-2025 年主播坑位费和佣金收入涉嫌未足额代扣个税。疑点：大额劳务费转账无完税证明，通过关联空壳公司（XX 文化传媒）转移利润。限 3 日内提交自查报告，预计补缴税款 + 滞纳金 ¥120 万。",
+              "source_tags": [
+                "Persona_Simulations/06_Ecommerce_Lin/Tax_Audit_Notice.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_16",
+          "level": 2,
+          "title": "PM Kevin · 个人生活",
+          "type": "Container",
+          "summary": "Kevin 在高压工作之外的真实生活：攒钱买车、婚房装修、五一露营计划。",
+          "source_tags": [
+            "Persona_Simulations/13_PM_Kevin/06_Memo_Camping_Checklist.md",
+            "Persona_Simulations/13_PM_Kevin/07_Excel_Renovation_Budget.md",
+            "Persona_Simulations/13_PM_Kevin/12_Excel_Personal_Finance_Plan.md"
+          ],
+          "children": [
+            {
+              "id": "L4_72",
+              "level": 4,
+              "title": "2026 年家庭理财计划",
+              "type": "Leaf",
+              "summary": "目标：年底存够 ¥10 万（买车准备）。收入：月薪 ¥2.5 万 × 12 + 年终奖预计 3 个月。控制：吃饭 ¥3000/月（少吃外卖），娱乐 ¥1000/月（电影+游戏+露营）。老婆要买戴森 ¥3000：决定买，作为生日礼物，这钱不能省。",
+              "source_tags": [
+                "Persona_Simulations/13_PM_Kevin/12_Excel_Personal_Finance_Plan.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_73",
+              "level": 4,
+              "title": "婚房装修预算表（89㎡，总预算 ¥30 万）",
+              "type": "Leaf",
+              "summary": "拆分：硬装半包 ¥8 万 + 全屋定制（索菲亚/欧派）¥5 万 + 中央空调（东芝）¥2.5 万 + 家具（源氏木语/宜家）¥4 万 + 家电（小米全家桶）¥5 万。厨房要装洗碗机，需提前改水电；阳台做生活+办公双功能区。",
+              "source_tags": [
+                "Persona_Simulations/13_PM_Kevin/07_Excel_Renovation_Budget.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_74",
+              "level": 4,
+              "title": "五一露营清单（安吉小杭坑，4 人）",
+              "type": "Leaf",
+              "summary": "睡眠系统：挪客屋脊帐篷 + 充气床垫 ×2 + 睡袋（温标 10℃）。炊具：卡式炉 + 摩卡壶 + 韩式烤肉盘 + 五花肉 2 斤。娱乐：Marshall 音箱 + 飞盘 + 投影仪（《星际穿越》）。提醒：防蚊喷雾！！老婆最怕蚊子。",
+              "source_tags": [
+                "Persona_Simulations/13_PM_Kevin/06_Memo_Camping_Checklist.md"
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "L2_17",
+          "level": 2,
+          "title": "陈教授 · 个人生活",
+          "type": "Container",
+          "summary": "副教授陈的私人生活：对抗脂肪肝的健身计划、西藏摄影之旅规划，以及一篇偶遇前女友的日记（\"公式比人可靠多了\"）。",
+          "source_tags": [
+            "Persona_Simulations/14_Professor_Chen/04_Photography_Trip_Plan_Tibet.md",
+            "Persona_Simulations/14_Professor_Chen/09_Fitness_Plan.md",
+            "Persona_Simulations/14_Professor_Chen/12_Diary_Personal_Reflection.md"
+          ],
+          "children": [
+            {
+              "id": "L4_75",
+              "level": 4,
+              "title": "健身计划（对抗脂肪肝，BMI 25.5）",
+              "type": "Leaf",
+              "summary": "体检轻度脂肪肝。计划：每周游泳 2 次（1000m）+ 每天骑车上班（5km）+ 戒糖。记录：W1 游 1 次；W2 游 0 次（改论文太忙）；W3 必须补上。激励：年底练出腹肌，奖励自己 24-70mm GM II 镜头。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/09_Fitness_Plan.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_76",
+              "level": 4,
+              "title": "西藏摄影之旅计划（7 月 10-25 日）",
+              "type": "Leaf",
+              "summary": "路线：318 国道川藏线（成都→拉萨）。相机：Sony A7R5 + 16-35mm GM + 70-200mm GM。无人机：DJI Mavic 3 Pro。必拍：贡嘎山日落（鱼子西）、理塘人像、然乌湖倒影。健康准备：高反药 + 氧气瓶。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/04_Photography_Trip_Plan_Tibet.md"
+              ],
+              "children": []
+            },
+            {
+              "id": "L4_77",
+              "level": 4,
+              "title": "日记：咖啡馆偶遇前女友",
+              "type": "Leaf",
+              "summary": "在星巴克写 paper，抬头看见她，她牵着小孩。对视了一眼，互相笑了笑，没说话。\"原来所谓的意难平，在时间面前什么都不是。\" 继续推导公式。晚上回去给猫开罐头。",
+              "source_tags": [
+                "Persona_Simulations/14_Professor_Chen/12_Diary_Personal_Reflection.md"
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

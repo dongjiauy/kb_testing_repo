@@ -1,0 +1,32 @@
+Title: Client Meeting - GlobalBank Pilots (Confidential)
+Date: 2026-03-09
+Participants: CEO (Alex), GlobalBank CIO (Mark), Sales Lead (Jessica)
+----------------------------------------
+
+Alex: Mark, good to see you. Thanks for taking the time. I know data privacy is the elephant in the room.
+
+Mark: Exactly, Alex. Our legal team is having a fit about the cloud-hosted LLM part. We process customer PII (Personally Identifiable Information) – social security numbers, loan histories. If a single byte of that hits an OpenAI server, we are dead. Fined into oblivion.
+
+Alex: I completely understand. That's why we built the "Vault" architecture specifically for finserv clients like you.
+
+Jessica: We can deploy the entire inference stack on your AWS VPC. Or even on your bare metal servers in New York if you prefer. Nothing leaves your perimeter.
+
+Mark: Wait, you mean you can run the 70B parameter model on our existing hardware? We don't have H100s lying around.
+
+Alex: We have a quantized version (4-bit) that runs efficiently on A10s or even high-end CPUs for batch processing. For real-time queries, you might need a small GPU cluster, but it's contained within your firewall. We send you the docker container. We don't see the data.
+
+Mark: And the updates?
+
+Alex: We push updates via a secure channel. You vet the code. You deploy it. We are just a software vendor.
+
+Mark: Okay, that sounds better. What about the POC timeline?
+
+Jessica: We can start next Monday. We need access to a sanitized dataset – maybe 500 loan documents – to fine-tune the extraction rules.
+
+Mark: Sanitized is fine. But I want to see results in 2 weeks. If it hallucinates a credit score, the deal is off.
+
+Alex: Fair enough. We will set the temperature to 0.1 – strict fact extraction mode. No creative writing. 
+
+Mark: Alright. Send the contract to legal. But put in writing: "Zero Data Exfiltration". If I see a single packet going to an IP I don't recognize, I'm pulling the plug.
+
+Alex: You have my word. And it'll be in the contract.

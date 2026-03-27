@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudMap AI - CEO Knowledge Graph Report</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --primary-color: #0ea5e9; /* Blue for Tech/Logistics */
+            --secondary-color: #ef4444; /* Red for Crisis/Conflict */
+            --accent-color: #f59e0b; /* Amber for Warning/Risk */
+            --text-color: #1f2937;
+            --meta-color: #6b7280;
+            --border-color: #e5e7eb;
+            --line-color: #cbd5e1;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.5;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .header h1 { color: #0c4a6e; }
+
+        .mindmap-container {
+            overflow-x: auto;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .node-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        /* Connecting Lines */
+        .node-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: -20px;
+            width: 20px;
+            height: 1px;
+            background-color: var(--line-color);
+        }
+
+        .children-container {
+            border-left: 1px solid var(--line-color);
+            margin-left: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .root-level > .node-wrapper::before { display: none; }
+        .root-level > .node-wrapper { margin-left: 0; }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+
+        /* Card Styles */
+        .node-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            width: 480px; /* Kept the wider width you liked */
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .node-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .node-level {
+            text-transform: uppercase;
+            font-size: 0.65em;
+            color: var(--meta-color);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .node-title {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .node-summary {
+            font-size: 0.85em;
+            color: #4b5563;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .source-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .source-tag {
+            font-size: 0.7em;
+            color: var(--primary-color);
+            background: #f0f9ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #e0f2fe;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Color Coding */
+        .node-card.container-node { border-left: 4px solid var(--primary-color); }
+        .node-card.leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+        .node-card.crisis-node { border-left: 4px solid var(--secondary-color); background: #fef2f2; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>CloudMap AI - Knowledge Graph Report</h1>
+        <p><strong>Input:</strong> 15 CEO Simulation Documents (Meeting Minutes, BP, Memos) | <strong>Rules:</strong> Zero Bullet Points, Aggressive Splitting</p>
+    </div>
+
+    <div class="mindmap-container">
+
+        <!-- ROOT 1: 战略转型 (Core Pivot) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Core Strategy</div>
+                    <div class="node-title">Strategic Pivot: From Robotaxi to Smart Logistics</div>
+                    <div class="node-summary">Due to a broken funding chain (only 7 months left) and investor pressure, the company decided to downgrade from L4 Robotaxi to logistics scenarios to generate cash flow.</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                        <span class="source-tag">Memo_Personal_Strategy.md</span>
+                        <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    
+                    <!-- L2: 决策背景 -->
+                    <div class="node-wrapper">
+                        <div class="node-card crisis-node">
+                            <div class="node-level">Level 2 • Crisis Driven</div>
+                            <div class="node-title">Survival Crisis (Burn Rate)</div>
+                            <div class="node-summary">Monthly burn rate reached 35 million, with cash on hand only enough for 7 months. Without Series C funding, death is certain.</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                                <span class="source-tag">Memo_Personal_Strategy.md</span>
+                            </div>
+                        </div>
+                         <!-- L3 Breakdown -->
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Funding Gap</div>
+                                    <div class="node-summary">Monthly expenditure of 35 million (due to purchasing Hesai lidars and office expansion), Runway &lt; 7 months.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Investor Pressure</div>
+                                    <div class="node-summary">Mike from Sequoia explicitly stated that Robotaxi is a bottomless pit and demands to see positive cash flow before following on.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Memo_Personal_Strategy.md</span>
+                                        <span class="source-tag">Dinner_with_Mike.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 转型路径 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • Path Planning</div>
+                            <div class="node-title">"Logistics First" Roadmap</div>
+                            <div class="node-summary">All-hands email announced the establishment of the Logistics BU, aiming to deliver 1,000 logistics vehicles by year-end to achieve positive cash flow.</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Email_All_Hands_Pivot.md</span>
+                                <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOT 2: 融资进展 (Fundraising) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Capital Operation</div>
+                    <div class="node-title">Series C Funding</div>
+                    <div class="node-summary">After many twists and turns, finally nailed down the Term Sheet with Mike from Sequoia. Funding amount $50M, valuation $720M (a down round compared to Series B).</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Series_C_Pitch_Deck_v2.md</span>
+                        <span class="source-tag">Term_Sheet_Analysis.md</span>
+                        <span class="source-tag">Dinner_with_Mike.txt</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    <!-- L2: 估值博弈 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • Negotiation Process</div>
+                            <div class="node-title">Valuation Defense Battle</div>
+                            <div class="node-summary">Mike initially demanded a 20% valuation cut ($640M). CEO Li used the SF Express order as leverage and ultimately pulled it back to $720M.</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Valuation_Crisis_Meeting.md</span>
+                                <span class="source-tag">Term_Sheet_Analysis.md</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                             <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Initial Offer (Price Cut)</div>
+                                    <div class="node-summary">Mike demanded Series C valuation drop to $640M (Pre-Money), risking triggering anti-dilution provisions.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Valuation_Crisis_Meeting.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Fact</div>
+                                    <div class="node-title">Final Agreement (TS)</div>
+                                    <div class="node-summary">Signed TS: Valuation $720M, Sequoia leading with $50M, option pool expanded by 20%.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Term_Sheet_Analysis.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 关键筹码 -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Key Event</div>
+                            <div class="node-title">SF Express Partnership</div>
+                            <div class="node-summary">Signed an LOI for 500 logistics vehicles, contract value 50 million, serving as a critical endorsement for the successful funding.</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                                <span class="source-tag">Dinner_with_Mike.txt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOT 3: 产品降本 (Cost Reduction) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Product Engineering</div>
+                    <div class="node-title">Extreme Cost Reduction Plan for Logistics Vehicles</div>
+                    <div class="node-summary">To meet the requirements of the SF Express order, per-vehicle BOM cost is reduced from ¥250k to ¥98k (mass production target).</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                    </div>
+                </div>
+                
+                <div class="children-container">
+                    <!-- L2: 降本措施 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • Technical Solution</div>
+                            <div class="node-title">Hardware & Algorithm Stripping</div>
+                            <div class="node-summary">Significantly reduced costs through algorithm pruning and localized hardware substitution, but this also sparked fierce opposition from the CTO.</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                                <span class="source-tag">Conflict_with_CTO.txt</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Measure</div>
+                                    <div class="node-title">Compute Power Pruning</div>
+                                    <div class="node-summary">Cut from 4 Orin-X chips to 1 (¥50k -> ¥12.5k), with algorithm adaptation completed by Zhang Bo's team.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Measure</div>
+                                    <div class="node-title">Sensor Downgrade</div>
+                                    <div class="node-summary">Canceled blind-spot lidars, switched main lidar to Hesai AT128 (domestic), reducing cost by 50%.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Measure</div>
+                                    <div class="node-title">Battery Swapping Model</div>
+                                    <div class="node-summary">Adopted Battery-as-a-Service (BaaS), stripping battery cost from BOM and shifting it to OPEX.</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- ROOT 4: 团队冲突 (Conflict) -->
+         <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Organizational Management</div>
+                    <div class="node-title">Executive Team Turmoil and Pacification</div>
+                    <div class="node-summary">CTO Zhang Bo threatened to resign due to opposition to the logistics downgrade, but was ultimately retained by transitioning him to "Chief Scientist" and preserving his pre-research budget.</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Conflict_with_CTO.txt</span>
+                        <span class="source-tag">Transcript_CTO_Retention.txt</span>
+                        <span class="source-tag">Memo_Personal_Strategy_v2.md</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    <!-- L2: 冲突细节 -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Event</div>
+                            <div class="node-title">Route Dispute (Robotaxi vs Logistics)</div>
+                            <div class="node-summary">Zhang Bo stuck to his L4 faith, arguing logistics vehicles were too "low" and unsafe; CEO Li insisted on survival first. A fierce argument broke out between them.</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Conflict_with_CTO.txt</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- L2: 解决方案 -->
+                     <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Result</div>
+                            <div class="node-title">Compromise Solution (Chief Scientist)</div>
+                            <div class="node-summary">Zhang Bo transitioned to head the "Forward-looking Research Institute," keeping a 20 million budget for L4 pre-research, not participating in the logistics vehicle deployment.</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Transcript_CTO_Retention.txt</span>
+                                <span class="source-tag">Email_All_Hands_Pivot.md</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

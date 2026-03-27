@@ -1,0 +1,28 @@
+Title: Patient Consult - Mrs. Thompson (72F)
+Date: 2026-03-08
+Participants: Dr. Sarah, Mrs. Thompson (Patient), Mark (Son)
+----------------------------------------
+
+Sarah: Good morning, Mrs. Thompson. How are we feeling today?
+
+Mrs. Thompson: A bit short of breath, dear. My chest feels heavy.
+
+Sarah: Let's check your EKG. Ah, I see some ST-segment elevation. Mark, your mother's heart is working a bit too hard. It's called "Ischemic Heart Disease". Basically, the blood flow to her heart muscle is restricted.
+
+Mark: Is it serious? Does she need surgery?
+
+Sarah: It's serious but manageable. We don't need bypass surgery yet. I'm recommending a procedure called "Angioplasty". We insert a tiny balloon to open the blocked artery and place a stent to keep it open.
+
+Mrs. Thompson: Is that painful?
+
+Sarah: Not at all. We use local anesthesia. You'll be awake but comfortable. It takes about 45 minutes.
+
+Mark: What are the risks?
+
+Sarah: Small risk of bleeding at the insertion site (wrist). Very small risk of stroke (<0.5%). But the benefit is huge. She will breathe easier immediately.
+
+Mark: Okay. Let's do it. When?
+
+Sarah: I can fit you in tomorrow morning. No food after midnight tonight. Just water.
+
+Mrs. Thompson: Thank you, doctor. I trust you.

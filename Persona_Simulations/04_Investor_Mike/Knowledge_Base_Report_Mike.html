@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Mike - Knowledge Base Report</title>
+    <style>
+        :root { --bg-color: #f8f9fa; --card-bg: #ffffff; --primary-color: #16a34a; --secondary-color: #475569; --crisis-color: #dc2626; --text-color: #1f2937; --meta-color: #6b7280; --border-color: #e5e7eb; --line-color: #cbd5e1; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .header h1 { color: #064e3b; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #4b5563; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #f0fdf4; padding: 2px 8px; border-radius: 4px; border: 1px solid #dcfce7; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fef2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Investor Mike - Knowledge Base</h1>
+        <p><strong>Context:</strong> Portfolio Management, Fraud Scandal & Firm Politics</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Portfolio Crisis -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Crisis Management</div>
+                    <div class="node-title">"FinTech Star" Fraud Allegations</div>
+                    <div class="node-summary">Whistleblower revealed that 40% of active users are bots and marketing spend is hidden as R&D to inflate Gross Margin.</div>
+                    <div class="source-tags"><span class="source-tag">Email_Whistleblower.txt</span><span class="source-tag">LP_Speech_Crisis.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Evidence</div>
+                            <div class="node-title">Whistleblower Claims</div>
+                            <div class="node-summary">Sent by "truth_seeker_99". Claims bot scripts were written internally.</div>
+                            <div class="source-tags"><span class="source-tag">Email_Whistleblower.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • LP Communication</div>
+                            <div class="node-title">Damage Control Strategy</div>
+                            <div class="node-summary">Acknowledge allegations, launch independent forensic audit, pivot narrative to successful AI portfolio (Nexus AI).</div>
+                            <div class="source-tags"><span class="source-tag">LP_Speech_Crisis.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: New Deals -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Deal Flow</div>
+                    <div class="node-title">Nexus AI Series B</div>
+                    <div class="node-summary">Lead investor ($15M check). Thesis: "Switzerland of Data" + Proprietary Graph Tech.</div>
+                    <div class="source-tags"><span class="source-tag">IC_Memo_Nexus.md</span><span class="source-tag">Partner_Meeting.md</span><span class="source-tag">DD_Call.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Moat Analysis</div>
+                            <div class="node-title">Defensibility</div>
+                            <div class="node-summary">Defensible against OpenAI via On-Prem deployment (Data Sovereignty) and Entity Linking tech.</div>
+                            <div class="source-tags"><span class="source-tag">IC_Memo_Nexus.md</span><span class="source-tag">DD_Call.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Risk</div>
+                            <div class="node-title">Team Stability</div>
+                            <div class="node-summary">Marketing Director burnout is a yellow flag. GlobalBank churn would be a red flag (but currently NRR 125%).</div>
+                            <div class="source-tags"><span class="source-tag">IC_Memo_Nexus.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Personal -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Personal Finance</div>
+                    <div class="node-title">Liquidity Crisis</div>
+                    <div class="node-summary">Cash poor despite high net worth. Mortgage/Alimony/School costs are $200k/mo. Job loss = Bankruptcy.</div>
+                    <div class="source-tags"><span class="source-tag">Wealth_Plan.md</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

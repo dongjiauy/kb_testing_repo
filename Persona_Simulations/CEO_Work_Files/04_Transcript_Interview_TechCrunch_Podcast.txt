@@ -1,0 +1,26 @@
+Title: Interview - TechCrunch Podcast (Vision & Competitors)
+Date: 2026-03-10
+Participants: Host (Mike), CEO (Alex)
+----------------------------------------
+
+Mike: Alex, everyone is saying AI is a commodity. You have Google, OpenAI, Anthropic, all fighting for the foundational model layer. Where does Nexus AI fit in? Why should anyone care about your app when GPT-5 is coming?
+
+Alex: Great question, Mike. And you're right. If you're building *just* another wrapper around GPT-4, you're dead. But here's the thing: enterprise value isn't created by the smartest model; it's created by the deepest context.
+
+Mike: Expand on that. Context?
+
+Alex: Imagine hiring the smartest Harvard graduate. That's GPT-4. But on day one, they know nothing about your company's internal history, the "why" behind decisions made three years ago. They are smart but useless. Nexus AI isn't the brain; it's the memory. We build the "Active Knowledge Graph" that connects every email, every Slack message, every Jira ticket into a searchable, reason-able structure.
+
+Mike: But Microsoft Copilot does that too, right? They own the data.
+
+Alex: Microsoft owns the Office suite, sure. But enterprises use 200 SaaS tools. Salesforce, Hubspot, Figma, GitHub. Microsoft plays nice with Microsoft. We play nice with everyone. We are the Switzerland of data integration. And honestly, our graph algorithms are superior. We don't just fetch documents; we understand the relationships between people and projects.
+
+Mike: That's a bold claim. Speaking of bold, your competitor "Cognitive Flow" just raised $50M. They claim to do the same thing.
+
+Alex: (Laughs) Cognitive Flow? Look, I respect the hustle. But have you seen their demo? It's literally just a vector database search. It hallucinates dates. It mixes up client names. That's dangerous. We spent two years building a verification layer that cross-references facts before answering. They are selling speed; we are selling trust. In enterprise, trust is the only currency that matters.
+
+Mike: So you think the "AI Bubble" will burst for the wrappers?
+
+Alex: Absolutely. 90% of AI startups today are features, not products. We are building infrastructure. The "Operating System for Enterprise Knowledge". That's a platform, not a feature.
+
+Mike: Fascinating take. Let's shift gears to your team...

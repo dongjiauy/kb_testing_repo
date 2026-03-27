@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>李老师 - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #fdfbf7; --card-bg: #ffffff; --primary-color: #d97706; --secondary-color: #78350f; --crisis-color: #b91c1c; --text-color: #1f2937; --meta-color: #6b7280; --border-color: #e5e7eb; --line-color: #cbd5e1; }
+        body { font-family: "PingFang SC", sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #92400e; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 4px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #374151; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #fef3c7; padding: 2px 8px; border-radius: 2px; border: 1px solid #fde68a; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fffbeb; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fef2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>李老师 - 知识图谱</h1>
+        <p><strong>背景:</strong> 校园霸凌、职称晋升与教育困境</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Bullying Incident -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • 突发事件</div>
+                    <div class="node-title">校园霸凌危机</div>
+                    <div class="node-summary">校董儿子陈某施暴，受害者家长要跳楼。面临良心与饭碗的抉择。</div>
+                    <div class="source-tags"><span class="source-tag">Incident_Report_Bullying.doc</span><span class="source-tag">Chat_with_Principal.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 施压</div>
+                            <div class="node-title">校长指示</div>
+                            <div class="node-summary">暗示若处理不当，学校将失去图书馆捐赠，且李老师职称不保。</div>
+                            <div class="source-tags"><span class="source-tag">Chat_with_Principal.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 方案</div>
+                            <div class="node-title">冷处理</div>
+                            <div class="node-summary">写检讨（不公开）、赔偿 2 万、承诺保送。</div>
+                            <div class="source-tags"><span class="source-tag">Incident_Report_Bullying.doc</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Teaching -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 教学管理</div>
+                    <div class="node-title">日常教学与家访</div>
+                    <div class="node-summary">应对公开课表演、学生成绩下滑及家长的过高期望。</div>
+                    <div class="source-tags"><span class="source-tag">Lesson_Plan_Open_Class.ppt</span><span class="source-tag">Teaching_Plan_Physics.md</span><span class="source-tag">Transcript_Parent_Meeting.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 形式主义</div>
+                            <div class="node-title">公开课造假</div>
+                            <div class="node-summary">提前安排学生背台词，调整实验器材造数据，只为应付督导。</div>
+                            <div class="source-tags"><span class="source-tag">Lesson_Plan_Open_Class.ppt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 学生问题</div>
+                            <div class="node-title">张伟成绩滑坡</div>
+                            <div class="node-summary">沉迷网文，物理不及格。家长逼得太紧导致逆反。</div>
+                            <div class="source-tags"><span class="source-tag">Transcript_Parent_Meeting.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# 课程大纲: 机器学习基础 (2026春)
+**授课人**: 陈教授
+**学分**: 4.0
+
+## 课程目标
+让学生掌握监督学习、无监督学习的核心算法，并能使用 PyTorch 进行简单模型搭建。
+
+## 考核方式
+- **平时作业**: 30% (每周 Coding 练习)
+- **期中考试**: 30% (闭卷，理论推导)
+- **期末项目**: 40% (小组合作，Kaggle 竞赛)
+
+## 教材
+- *Pattern Recognition and Machine Learning* (Bishop)
+- *Deep Learning* (Goodfellow)
+
+*Note to self*: 今年要把 Transformer 的内容加进去，RNN 可以略讲了。

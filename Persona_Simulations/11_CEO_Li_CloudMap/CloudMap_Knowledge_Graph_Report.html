@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云图智行 (CloudMap AI) - CEO 知识图谱报告</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --primary-color: #0ea5e9; /* Blue for Tech/Logistics */
+            --secondary-color: #ef4444; /* Red for Crisis/Conflict */
+            --accent-color: #f59e0b; /* Amber for Warning/Risk */
+            --text-color: #1f2937;
+            --meta-color: #6b7280;
+            --border-color: #e5e7eb;
+            --line-color: #cbd5e1;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.5;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .header h1 { color: #0c4a6e; }
+
+        .mindmap-container {
+            overflow-x: auto;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .node-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        /* Connecting Lines */
+        .node-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: -20px;
+            width: 20px;
+            height: 1px;
+            background-color: var(--line-color);
+        }
+
+        .children-container {
+            border-left: 1px solid var(--line-color);
+            margin-left: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .root-level > .node-wrapper::before { display: none; }
+        .root-level > .node-wrapper { margin-left: 0; }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+
+        /* Card Styles */
+        .node-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            width: 480px; /* Kept the wider width you liked */
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .node-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .node-level {
+            text-transform: uppercase;
+            font-size: 0.65em;
+            color: var(--meta-color);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .node-title {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .node-summary {
+            font-size: 0.85em;
+            color: #4b5563;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .source-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .source-tag {
+            font-size: 0.7em;
+            color: var(--primary-color);
+            background: #f0f9ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #e0f2fe;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Color Coding */
+        .node-card.container-node { border-left: 4px solid var(--primary-color); }
+        .node-card.leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+        .node-card.crisis-node { border-left: 4px solid var(--secondary-color); background: #fef2f2; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>云图智行 (CloudMap AI) - 知识图谱报告</h1>
+        <p><strong>输入:</strong> 15 份 CEO 模拟文件 (会议纪要, BP, 备忘录) | <strong>规则:</strong> Zero Bullet Points, Aggressive Splitting</p>
+    </div>
+
+    <div class="mindmap-container">
+
+        <!-- ROOT 1: 战略转型 (Core Pivot) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 核心战略</div>
+                    <div class="node-title">战略转型: 从 Robotaxi 到 智慧物流</div>
+                    <div class="node-summary">由于资金链断裂(仅剩7个月)和投资人施压，公司决定从 L4 Robotaxi 降维打击物流场景，以此获得现金流。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                        <span class="source-tag">Memo_Personal_Strategy.md</span>
+                        <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    
+                    <!-- L2: 决策背景 -->
+                    <div class="node-wrapper">
+                        <div class="node-card crisis-node">
+                            <div class="node-level">Level 2 • 危机驱动</div>
+                            <div class="node-title">生存危机 (Burn Rate)</div>
+                            <div class="node-summary">月支出达 3500 万，账上现金仅够支撑 7 个月。若无 C 轮融资必死无疑。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                                <span class="source-tag">Memo_Personal_Strategy.md</span>
+                            </div>
+                        </div>
+                         <!-- L3 Breakdown -->
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">资金缺口</div>
+                                    <div class="node-summary">单月支出 3500 万 (因购买 Hesai 雷达及扩租)，Runway < 7 个月。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Q1_Mgmt_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">投资人施压</div>
+                                    <div class="node-summary">红杉 Mike 明确表示 Robotaxi 是无底洞，要求看到正向现金流才肯跟投。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Memo_Personal_Strategy.md</span>
+                                        <span class="source-tag">Dinner_with_Mike.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 转型路径 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 路径规划</div>
+                            <div class="node-title">"Logistics First" 路线图</div>
+                            <div class="node-summary">全员邮件宣布成立物流 BU，目标年底交付 1000 台物流车，实现现金流转正。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Email_All_Hands_Pivot.md</span>
+                                <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOT 2: 融资进展 (Fundraising) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 资本运作</div>
+                    <div class="node-title">C 轮融资 (Series C)</div>
+                    <div class="node-summary">历经波折，最终与红杉 Mike 敲定 Term Sheet。融资额 $50M，估值 $7.2 亿 (较 B 轮下跌)。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Series_C_Pitch_Deck_v2.md</span>
+                        <span class="source-tag">Term_Sheet_Analysis.md</span>
+                        <span class="source-tag">Dinner_with_Mike.txt</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    <!-- L2: 估值博弈 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 谈判过程</div>
+                            <div class="node-title">估值保卫战</div>
+                            <div class="node-summary">Mike 最初要求砍估值 20% ($6.4亿)，李总利用顺丰订单作为筹码，最终拉回至 $7.2亿。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Valuation_Crisis_Meeting.md</span>
+                                <span class="source-tag">Term_Sheet_Analysis.md</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                             <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">初始报价 (砍价)</div>
+                                    <div class="node-summary">Mike 要求 C 轮估值降至 $6.4 亿 (Pre-Money)，触发反稀释条款风险。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Valuation_Crisis_Meeting.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">最终协议 (TS)</div>
+                                    <div class="node-summary">签署 TS: 估值 $7.2 亿，红杉领投 $50M，期权池扩大 20%。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Term_Sheet_Analysis.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 关键筹码 -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 关键事件</div>
+                            <div class="node-title">顺丰 (SF Express) 合作</div>
+                            <div class="node-summary">签署 500 台物流车意向书 (LOI)，合同价值 5000 万，成为融资成功的关键背书。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Series_C_Pitch_Deck_v3.md</span>
+                                <span class="source-tag">Dinner_with_Mike.txt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOT 3: 产品降本 (Cost Reduction) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 产品工程</div>
+                    <div class="node-title">物流车极致降本方案</div>
+                    <div class="node-summary">为了满足顺丰订单要求，将单车 BOM 成本从 ¥25 万降至 ¥9.8 万 (量产目标)。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                    </div>
+                </div>
+                
+                <div class="children-container">
+                    <!-- L2: 降本措施 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 技术方案</div>
+                            <div class="node-title">硬件与算法阉割</div>
+                            <div class="node-summary">通过算法剪枝和硬件国产化替代，大幅降低成本，但也引发了 CTO 的强烈反对。</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                                <span class="source-tag">Conflict_with_CTO.txt</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 措施</div>
+                                    <div class="node-title">算力剪枝</div>
+                                    <div class="node-summary">从 4 颗 Orin-X 砍到 1 颗 (¥5万 -> ¥1.25万)，由张博团队完成算法适配。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 措施</div>
+                                    <div class="node-title">传感器降级</div>
+                                    <div class="node-summary">取消补盲雷达，主雷达换用 Hesai AT128 (国产)，成本降 50%。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Update.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 措施</div>
+                                    <div class="node-title">电池换电模式</div>
+                                    <div class="node-summary">采用电池租赁 (BaaS)，将电池成本从 BOM 中剥离，转为运营成本。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Cost_Reduction_Meeting.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- ROOT 4: 团队冲突 (Conflict) -->
+         <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • 组织管理</div>
+                    <div class="node-title">高管团队动荡与安抚</div>
+                    <div class="node-summary">CTO 张博因反对降维做物流而提出离职，最终通过转岗"首席科学家"和保留预研经费成功挽留。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Conflict_with_CTO.txt</span>
+                        <span class="source-tag">Transcript_CTO_Retention.txt</span>
+                        <span class="source-tag">Memo_Personal_Strategy_v2.md</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    <!-- L2: 冲突细节 -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 事件</div>
+                            <div class="node-title">路线之争 (Robotaxi vs Logistics)</div>
+                            <div class="node-summary">张博坚持 L4 信仰，认为物流车太 Low 且不安全；李总坚持活下去优先。双方爆发激烈争吵。</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Conflict_with_CTO.txt</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- L2: 解决方案 -->
+                     <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 结果</div>
+                            <div class="node-title">妥协方案 (首席科学家)</div>
+                            <div class="node-summary">张博转岗负责"前瞻研究院"，保留 2000 万经费做 L4 预研，不参与物流车落地。</div>
+                             <div class="source-tags">
+                                <span class="source-tag">Transcript_CTO_Retention.txt</span>
+                                <span class="source-tag">Email_All_Hands_Pivot.md</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

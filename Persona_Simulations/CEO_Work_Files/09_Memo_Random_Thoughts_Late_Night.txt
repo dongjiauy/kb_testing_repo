@@ -1,0 +1,18 @@
+# Late Night Thoughts - Memo to Self
+Date: 2026-03-12 02:30 AM
+
+- **Product Sucks:** Just tried to find the Q3 revenue report on our own app. It took 3 queries. "Revenue Q3", "Q3 Sales", "Financials". Why is it so dumb? It should know I'm the CEO and show me the dashboard instantly. Fix this. Personalization is key.
+
+- **Marketing Idea:** "Your Data has a PhD." No, that's too academic. How about "Stop Searching, Start Knowing." A bit cliché. "The Anti-Chatbot." Bold? Maybe.
+  - *Action*: Text Ben (Marketing) about this. Wait, Ben is leaving. Shit. Text Sarah instead.
+
+- **Family:**
+  - Need to buy a gift for Lily's 6th birthday. She likes space. Maybe a telescope? Or a trip to the planetarium?
+  - Dinner with wife on Friday. Cancel the team drinks. I promised her. Do not flake this time.
+
+- **Competitor Fear:** What if Microsoft just buys Cognitive Flow? That would be annoying. But they already have Copilot. Why would they? Unless... for the talent? 
+  - *Strategy*: Need to lock in the GlobalBank deal fast. Once we are embedded in their infrastructure, we are sticky. Microsoft can't rip us out easily.
+
+- **Sleep:** 4 hours again. Need to run in the morning. Or at least walk. My back hurts.
+
+- **Japan:** Mike is right. Japan is risky. But high risk, high reward. If we crack it, we are the only player. SoftBank intro is critical. Need to push Jessica on that.

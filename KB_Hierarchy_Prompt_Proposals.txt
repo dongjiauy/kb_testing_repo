@@ -1,0 +1,78 @@
+# Knowledge Base 自动分级与摘要 (PRD 3.2) - Prompt 优化方案
+
+## 核心挑战分析
+在目前的 PRD 3.2 设计中，允许 AI 根据内容复杂度自适应生成多达 5 层的知识树。
+**痛点预警：**如果完全让 AI “无界限”地自由发挥，L1（根节点）和 L2 很容易变成大杂烩。今天按时间分，明天按人名分，后天按项目分。这会导致用户每次打开 Knowledge Base 时都觉得缺乏一致性和掌控感。
+
+人类的“心智模型”通常在最顶层是极其结构化和稳定的（比如：工作/生活、项目/日常、客户/内部），越往下才越细碎。
+
+为了在**“AI 的动态适应”**和**“人类的结构预期”**之间找平衡，建议采用**“顶层锚定（Top-Down Anchoring）+ 底层自由（Bottom-Up Adaptive）”**的混合策略。
+
+---
+
+## 方案一：基于“实体类型”的公文包模型（最稳妥、最符合直觉）
+**适用场景：** 适合绝大多数通用型知识库，让用户第一眼看到的就是自己熟悉的“文件夹分类”。
+
+**Prompt 补充指令：**
+```markdown
+### Phase 1: Global Categorization (Level 1 Anchoring)
+When defining Level 1 (Root Nodes), you MUST categorize the insights into one of the following standard "Human-Centric Buckets". Do not invent new L1 categories unless absolutely necessary:
+1. **Projects & Initiatives (项目与行动)**: Ongoing work, product development, specific campaigns. (e.g., "Project Titan", "Q3 Marketing")
+2. **People & Relationships (人脉与关系)**: Information about clients, investors, colleagues, or competitors. (e.g., "Sequoia Capital", "Key Investors")
+3. **Domain Knowledge & Concepts (领域知识)**: Static knowledge, research, industry trends, and learning notes. (e.g., "AI Industry Trends", "Legal Compliance")
+4. **Operations & Admin (运营与日常)**: Daily routines, personal setup, financial records. (e.g., "Q2 Budget", "Weekly Meetings")
+
+*AI Adaptive Rule*: You strictly assign content to these L1 buckets. Once inside a bucket (Level 2 to 5), you have full freedom to recursively decompose the content based on complexity and semantic clustering.
+```
+
+---
+
+## 方案二：基于“Onboarding 画像”的动态生成（最个性化）
+**适用场景：** 充分利用 PRD 3.3 中的冷启动问卷，打造“千人千面”的知识库结构。
+
+**Prompt 补充指令：**
+```markdown
+### Phase 1: Persona-Driven Hierarchy (Level 1 Anchoring)
+You will be provided with the user's Onboarding Profile: [Role: {user_role}, Industry: {user_industry}, Interests: {user_interests}].
+Your Level 1 (Root Nodes) MUST be tailored to this specific user's professional mental model. 
+- For a Product Manager, L1 should naturally be things like "Product Strategy", "User Research", "Development Sprints". 
+- For a Sales Executive, L1 should be "Key Accounts", "Pipeline", "Market Intelligence".
+Do not use generic buckets if the user's persona suggests a highly specialized structure.
+
+*AI Adaptive Rule*: Align the top 1-2 levels with the user's real-world job functions. From Level 3 downwards, freely adapt to the density of the specific files or transcripts provided.
+```
+
+---
+
+## 方案三：基于“信息生命周期/状态”的看板模型（行动导向）
+**适用场景：** 如果 Even AI 的定位更偏向于“执行助理（Executive Assistant）”而非纯静态的“维基百科”，这个方案能极大提升信息的行动力。
+
+**Prompt 补充指令：**
+```markdown
+### Phase 1: Lifecycle Categorization (Level 1 Anchoring)
+Instead of purely thematic folders, group the Level 1 Root Nodes by their actionable state in the user's life:
+1. **Active Decisions & Strategies (决策与战略)**: High-level directions currently being formed.
+2. **Actionable Workstreams (执行流)**: Concrete projects, sprints, and tasks in motion.
+3. **Reference Library (参考库)**: Passive information, reading materials, industry reports, background docs.
+4. **Meeting & Interaction Logs (交互记录)**: Chronological or entity-based logs of conversations and meetings.
+
+*AI Adaptive Rule*: Map the ingested data to its functional purpose at Level 1. Then, use Levels 2-5 to break down the complex technical or business details.
+```
+
+---
+
+## 💡 最终修改建议 (针对当前 PRD 的 Prompt)
+
+建议采用 **方案一 与 方案二 的融合版**。在现有的 Prompt 中，将 `# Phase 1: Global Analysis` 替换为以下结构，既保证了顶层的稳定性，又兼顾了个性化：
+
+```markdown
+### Phase 1: Global Analysis & Anchoring (The "Top-Down" Framework)
+1. **Scan** all input content and the user's profile (Role/Industry) to understand the global context.
+2. **Anchor (Level 1):** Assign the content to standard cognitive buckets tailored to the user's profession (e.g., *Projects, People/Entities, Knowledge Base, Operations*). This ensures the user sees a familiar "filing cabinet" structure every time they open the App. Do NOT create random, highly specific L1 nodes (like "Meeting with John") unless it represents a massive, multi-month initiative.
+3. **Adaptive Decomposition (Level 2-5):** Once safely inside an L1 bucket, let the content density drive the structure from the "Bottom-Up". (e.g., L1: `Projects` -> L2: `Project Titan` -> L3: `Backend Architecture` -> L4: `API Specs` -> L5 Fact: `Rate Limiting Rules`).
+```
+
+**为什么这样改？**
+- 顶层锁死了认知框架（框架不会随着每一次对话乱跳）。
+- 底层完全释放了 AI 算力（可以做得极其详尽和有逻辑）。
+- 完美契合 PRD 中“相对具体的分层基准”的需求。

@@ -1,0 +1,15 @@
+Subject: Notification of Grant Approval
+From: NSFC (国家自然科学基金委)
+To: Prof. Chen
+
+Dear Prof. Chen,
+
+We are pleased to inform you that your proposal titled "**Robustness Verification of Large Language Models**" has been approved for funding.
+
+**Grant Number**: 62672001
+**Amount**: ¥580,000
+**Duration**: 2027-01-01 to 2030-12-31
+
+Please submit the detailed budget plan by April 30.
+
+Congratulations!

@@ -1,0 +1,38 @@
+Title: Coffee Chat - Investor (Sequoia) - Mike
+Date: 2026-03-12
+Participants: CEO (Alex), Sequoia Partner (Mike)
+----------------------------------------
+
+Mike: So Alex, tell me straight. How bad is the hiring situation?
+
+Alex: It's insane, Mike. Google is offering $500k base + $1M RSU over 4 years to fresh PhDs. We can't compete on cash.
+
+Mike: Don't compete on cash. Compete on impact. Tell them at Google they are optimizing ad clicks. Here they are building the brain of the Fortune 500.
+
+Alex: I say that. But their wives/husbands look at the bank account. We lost two candidates last week to OpenAI.
+
+Mike: OpenAI is OpenAI. What about the rest?
+
+Alex: We're winning against the mid-tier startups. Because we have actual revenue. $2.8M ARR is real.
+
+Mike: Speaking of revenue, I heard a rumor about Cognitive Flow. Their churn is through the roof. 30% monthly.
+
+Alex: (Laughs) I knew it. Their product is smoke and mirrors. But they just raised $50M!
+
+Mike: That's why I'm telling you. Don't worry about their valuation. Worry about their customers. If they churn, go pick them up. Be the safe harbor.
+
+Alex: That's the plan. We have a "Rescue Team" specifically targeting their unhappy clients. Offering free migration.
+
+Mike: Smart. One more thing. There's a small team in Toronto, 4 guys, ex-Cohere. They built a really efficient RAG engine for legal documents. They are running out of cash.
+
+Alex: Interesting. Acquihire?
+
+Mike: Maybe. Or just license their tech. But they are solid engineers. Could solve your hiring problem. I can intro you.
+
+Alex: Please do. If the price is right (all equity), I'm interested. We need senior backend talent yesterday.
+
+Mike: Done. I'll send the email. Now, about that Japan expansion... are you sure you want to open a new front right now? It's a distraction.
+
+Alex: It's not a distraction, Mike. It's insurance. If the US market slows down due to macro, Asia is our hedge. Plus, Japanese companies love on-prem software. It's perfect for our architecture.
+
+Mike: Fair point. Just don't let it kill your runway.

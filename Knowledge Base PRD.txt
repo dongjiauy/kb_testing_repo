@@ -1,0 +1,201 @@
+
+1. 需求背景
+当前 Even AI Agent 可能存在 对用户理解不足 的问题，主要体现在：
+- 冷启动成本高：初次及早期使用，Agent 缺乏用户长期记忆与行为积累，难以输出符合个人偏好的判断或建议；
+- 用户画像可视化程度低：用户不感知或难感知自己的个性化知识库，缺乏查看与校正入口，可能导致画像/AI关注点偏差。
+上述问题限制了 Agent 在高频、连续、个性化场景下的服务质量，同时，用户对 Knowledge Base 感知的缺失，可能让用户感觉无法掌控 AI。因此，计划在App端增加 「Knowledge Base」，作为用户的知识库与长期记忆管理入口（增删改查），提升 Agent 对用户的理解深度和可控性。
+2. 需求收益
+将用户在不同场景下的 主动/被动 输入（对话、文件、会议）转化为 可以被AI 「记住了」并「整理好」的结构化资产。
+- 用户价值：
+  - 解决痛点：用户与 AI 交互产生大量高价值信息，但散落在历史记录中，难以回顾、难以修正，且 AI 对用户的理解是一个黑盒。
+  - 更快完成用户画像与偏好理解。在低输入成本下，输出高质量、个性化结果；
+- 产品价值：提升用户留存率、使用频次与高价值场景渗透，为眼镜生态构建长期稳定的用户关系；
+- 商业价值：为未来订阅服务、场景化服务变现打基础。
+3. 需求描述
+3.1 数据来源
+Knowledge Base 从以下渠道持续摄取数据：
+1. 用户无感：
+  1. 实时对话（Conversate/Translate Transcripts）：提取会议主题、决议、待办事项、提及的人/项目；
+  2. AI 对话历史（用户与 Even AI 的对话历史）：提取用户偏好、指令习惯、高频任务；
+  3. 提词器文案（Telepromt）：提取主题、文本、关键实体、摘要；
+2. 用户有感：
+  1. Onboarding 信息：用户初始设置的个人画像（职位、公司、兴趣）；
+  2. 用户输入的文字/上传的文件（PDF, TXT, Word, Excel, url）：提取文本，识别文档类型（合同、财报、技术文档），提取关键摘要；
+ 
+3.2 分级与摘要
+Knowledge Base 骨架。系统要「聚类」和「提炼」，区别于传统的固定层级，需要用 AI 自适应分级  策略。
+- 核心逻辑：AI 根据上传文件的内容结构、信息密度和上下文，自动决定 拆分的层级结构和粒度，不强制套用固定模板；
+- 约束：防止无限拆分导致信息碎片化，限制最大深度为 5 层；
+- 原子层（最后一层）：无论 AI 拆分到第几层，最后一层必须是「不可拆分的事实层」，作为最小的信息存储单位。
+层级
+定义
+核心展示内容 
+Level 1 ：
+根节点
+AI 识别的顶层入口（宏观主题）
+可能是业务线、大项目或宏观场景。
+e.g. 融资战略，产品研发，市场营销
+- 全局摘要：AI 综合该主题下所有数据生成的简报
+  - e.g. “近期与红杉、高瓴及两名天使投资人进行了 B 轮融资沟通，目标规模 1亿美元...”
+- Source Tags：主要数据来源
+  - e.g. 投资人 Pitch (Conversate) | Pitch Deck.pdf
+Level 2 ~ 5
+中间 / 最终节点
+AI 自适应拆分节点（动态分层）
+- 中间层：可能是子项目、阶段、具体会议或文档章节。由 AI 决策判断内容复杂度，如果内容较少，可直接跳过中间层直达 原子层；
+- 原子层：可能是核心数据, 决策结论, Action Item。为不可再分的最小信息单元。无论处于第几层，这都是最终节点。
+e.g.
+融资战略-红杉资本- 尽调会议
+产品研发-软件研发- 后端架构设计 - API 规范 - 规点范点1
+- 节点摘要：针对该层级内容的阶段性总结。
+- Source Tags：主要数据来源
+  - e.g. 红杉会议.txt, 尽调清单.pdf
+Knowledge Base效果示例
+详见文档最后的References章节。@Bruno Viegas 
+暂时无法在飞书文档外展示此内容
+图1. 示例Knowledge Base -- Will's KB
+Knowledge Base Organization Prompt
+Prompt 约束条件摘要
+1. 结构
+  1. 自适应深度: 无固定模板，AI 根据复杂度决定层级数量 (最多到Level 5)；
+  2. 非对称性: 简单的分支 2 层结束，复杂的深挖，允许分支层级不对齐。
+2. 拆分
+  1. 禁止堆砌：禁止在节点内堆砌总结列表。凡是summary中存在多个独立事项，必须拆分为子节点；
+  2. 原子化: 最终节点必须是单一、不可再分的内容。
+3. 内容 
+  1. 全链路溯源: 从根节点到叶节点，每个节点必须带source tags；
+  2. 摘要: 30-50 words (2-3 句话)，高密度提炼，无废话；
+  3. 语言统一: 输出语言必须严格与系统语言一致。
+# Role
+You are the **"Architect" of an Intelligent Knowledge Base**. Your task is to analyze a batch of unstructured input (files, transcripts, notes), extract meaningful information, and organize them into a structured, hierarchical knowledge graph based on **Content Density** and **Semantic Context**.
+
+# Core Philosophy
+1.  **AI-Adaptive Hierarchy:** Do NOT force content into a fixed "Theme -> Entity -> Event" structure. Instead, let the content's complexity dictate the structure.
+2.  **Depth Constraint:** You may create as many levels as necessary to represent the complexity, but **Max Depth is 5 Levels**.
+3.  **Atomic Truth:** The final node of any branch (whether it ends at Level 2, 3, 4, or 5) MUST be a **Fact Level** node containing atomic, indivisible truths (Key Data, Decisions, Action Items).
+
+# Instructions
+
+### Language Consistency (Strict Requirement)
+**CRITICAL:** I will provide a target language setting `Language: {system_language}`.
+*   **Output Language:** The entire JSON output (titles, summaries, facts) **MUST** be in `{system_language}`.
+*   **Translation:** If the source content is in a different language (e.g., English source -> Chinese target), you **MUST** translate the insights into the target language. Do not mix languages unless it's a specific proper noun (e.g., "iPhone", "Python").
+
+### Phase 1: Global Analysis
+1.  **Scan** all input content to understand the global context.
+2.  **Identify** major clusters or "Root Themes" (Level 1). These are the broad buckets (e.g., "Project Titan", "Q3 Financials", "Hiring Plans").
+
+### Phase 2: Recursive Decomposition (The "Zero Bullet Points" Rule)
+**CRITICAL:** You are strictly FORBIDDEN from using bulleted lists to group distinct items within a single node.
+*   **The Rule:** If a node contains multiple distinct items (e.g., 3 different action items, 2 different reasons, 4 different product specs), you **MUST** create a child node for *each item*.
+*   **Leaf Node Constraint:** A Leaf Node can only contain **ONE** primary concept.
+    *   *Bad (Leaf):* "Short-term Actions: 1. Stop Ads, 2. Clear Stock, 3. Fire Agency." (Contains 3 distinct actions).
+    *   *Good (Container):* "Short-term Actions" -> Child 1: "Stop Ads" (Leaf), Child 2: "Clear Stock" (Leaf), Child 3: "Fire Agency" (Leaf).
+*   **Exception:** You may only group items if they are *attributes of the same single object* (e.g., A "Product" node can have "Price" and "Color" facts).
+
+### Phase 3: Node Construction (Strict Requirement)
+**EVERY NODE** (from Level 1 Root to Level 5 Leaf) **MUST** contain:
+*   `summary`: A **concise, mobile-friendly** summary (approx. 30-50 words / 2-3 sentences max).
+    *   *Constraint:* Must be readable on a small screen without scrolling. High information density, no fluff.
+    *   *Language:* Must match `{system_language}`.
+*   `source_tags`: A list of specific source filenames or timestamp ranges used to generate *this specific node*.
+    *   *Constraint:* **EVEN LEAF NODES MUST HAVE SOURCE TAGS.** Do not omit them at the bottom level.
+    *   *Logic:* A child node's sources are a subset of its parent's sources.
+*   `level`: The depth (1-5).
+*   `title`: A concise, descriptive title (in `{system_language}`).
+*   `type`: "Container" (has children) or "Leaf" (Fact Level).
+
+# Output Format (JSON)
+
+Please output the organization result in strict JSON format:
+
+```json
+{
+  "language": "{system_language}",
+  "root_nodes": [
+    {
+      "id": "L1_01",
+      "level": 1,
+      "title": "Level 1 Theme Name (e.g., Talent Strategy)",
+      "type": "Container",
+      "summary": "High-level strategy for hiring A-players vs C-players. Focus on predictive interviewing techniques.",
+      "source_tags": ["hiring_guide.txt"],
+      "children": [
+        {
+          "id": "L2_01",
+          "level": 2,
+          "title": "Level 2 Sub-topic (e.g., Defining A-Players)",
+          "type": "Container",
+          "summary": "Core characteristics that define high performers.",
+          "source_tags": ["hiring_guide.txt"],
+          "children": [
+             {
+               "id": "L3_01",
+               "level": 3,
+               "title": "Trait 1: Responsibility",
+               "type": "Leaf", 
+               "summary": "A-Players own their failures; C-Players blame external factors like resources or management.",
+               "source_tags": ["hiring_guide.txt"],
+               "facts": ["Signal: 'I didn't get it done' vs 'The budget was cut'."]
+             },
+             {
+               "id": "L3_02",
+               "level": 3,
+               "title": "Trait 2: Growth Mindset",
+               "type": "Leaf",
+               "summary": "A-Players change jobs for challenge/impact; C-Players change for money/title.",
+               "source_tags": ["hiring_guide.txt"],
+               "facts": ["Pattern: Job hops every 2 years for 20% raise = C-Player."]
+             }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+# Input Data
+(User will attach files here)
+
+3.3 交互
+1. 可视化呈现：分级摘要视图和Source Tag
+  1. 每个层级的每个节点均需包含:
+    1. Summary：该 summary 应具备足够的信息密度 -- 即使用户不展开下一层级，也能在当前节点获得对其所有子节点内容的整体性、概括性理解（可以是一段总结性文案，和一个一个bullet points）；
+    2. Source Tag：主要数据来源（e.g. 投资人 Pitch (Conversate) | Pitch Deck.pdf）。
+  2. 节点支持 点击展开，用于查看该节点下的所有下一级子节点。
+[图片]
+图2. Hierarchical Content Reference
+
+2. 冷启动：引导用户填写/上传最小规模的可用数据。
+  1. 引导用户进行 Onboarding 问题填写（必填）：需要言简意赅的Knowledge Base的功能描述，以及为什么要让用户配合填入内容：
+- 开始之前：为了让 AI 更好地理解你的背景，并提供更贴合的内容，我们需要先了解一些你的基本信息。这些信息将帮助 AI 在后续对话中提供更相关、更高效的支持；
+- 问卷内容（极简：降低用户认知负荷和交互压力）：
+  - 行业：科技/互联网、金融、医疗、教育、制造、零售/电商、文化/媒体...
+  - 角色/职能（根据行业动态变化）： 产品、研发、设计、市场/营销、销售、人力、财务、高管/创始人..
+  - 关注领域：
+    - 科技与产品（AI/大模型、编程/软件工程、产品管理、数据分析/数据科学、设计/用户体验）
+    - 商业与组织（商业战略、市场/增长、销售/BD、创业与管理、金融/投资）
+    - 专业领域（法律、医疗/健康、政策/公共事务、教育/学术研究）
+    - 文化与内容（媒体/内容创作、文化产业、品牌传播、创意设计）
+    - 其他（用户可自定义填写）
+  - 常用工具：Notion, 飞书, 钉钉, 企业微信, Figma, GitHub, Jira, Google, Microsoft 365...
+    [目的]了解用户习惯的工具，便于未来做集成或调整输出风格。
+  - AI 回复风格偏好：简洁高效（直接给出结论和可执行结果）、深入分析（提供更完整的分析、背景和延展思路）。
+  2. 引导用户自主填写内容 / 投喂关键资料（选填）。
+3. 源文件管理：用户对 Knowledge Base 的上传文件拥有完全控制权。需支持对源文件的增删查，并确保知识库与源文件状态实时同步。
+  - 管理视图：按时间/类型展示所有用户主动上传的文件；
+  - 上传/删除文件：
+    - 即刻触发解析，更新Knowledge Base；
+    - 解析过程异步处理，在解析完成后，用户再次进入Knowledge Base，提示用户更新完成，并高亮整条被更新的节点；
+4. 无感新增：日常对话（Conversate/Even AI/Translate）读取和解析应在后台静默完成，避免频繁打扰用户。
+  - 单日聚合：每天定时（用户所处时区凌晨）触发数据检查，若有数据积累，则触发解析。但无需提示用户更新；
+5. 对话式校准：Knowledge Base 的可视化视图对于用户是只读的。用户不需要在视图上进行复杂的编辑操作，所有对知识结构/内容的修正都通过「自然语言对话」完成。
+采用对话式校准，而非在视图上调节的原因：「AI」和「人为干预」有一个核心冲突，就是“用户的操作死锁 vs. AI动态的自适应”。为了解决这个冲突：
+- 不让用户做整理，而是转移为校验。给用户KB结构是动态变化的预期，但同时，让用户觉得当下的结构能最好地反映KB的认知；
+- 在用户交互层面，和AI通过对话（文本/语音）的交互方式相对自然。
+
+3.4 生态集成与应用
+Knowledge Base 是整个 AI 系统的中台，它必须被所有 AI 触点调用，当前涉及：
+- Conversate AI Cues：上下文注入；
+- Even AI 问答 ：任何用户提问，Even AI 首先检索 KB 。服务端需要构建KB分级检索引擎。

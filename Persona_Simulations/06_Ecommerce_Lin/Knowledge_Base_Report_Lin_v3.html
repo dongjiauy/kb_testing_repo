@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电商操盘手林总 - 知识库报告 (v3 Zero Bullet Points)</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --primary-color: #e11d48; /* Red for Ecommerce urgency */
+            --secondary-color: #059669; /* Green for Profit/Strategy */
+            --text-color: #1f2937;
+            --meta-color: #6b7280;
+            --border-color: #e5e7eb;
+            --line-color: #cbd5e1;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.5;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .header h1 { color: #881337; }
+
+        .mindmap-container {
+            overflow-x: auto;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .node-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        /* Connecting Lines */
+        .node-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: -20px;
+            width: 20px;
+            height: 1px;
+            background-color: var(--line-color);
+        }
+
+        .children-container {
+            border-left: 1px solid var(--line-color);
+            margin-left: 20px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .root-level > .node-wrapper::before { display: none; }
+        .root-level > .node-wrapper { margin-left: 0; }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+
+        /* Card Styles */
+        .node-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            width: 300px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .node-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .node-level {
+            text-transform: uppercase;
+            font-size: 0.65em;
+            color: var(--meta-color);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .node-title {
+            font-weight: 700;
+            font-size: 1.05em;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .node-summary {
+            font-size: 0.85em;
+            color: #4b5563;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .source-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .source-tag {
+            font-size: 0.7em;
+            color: var(--primary-color);
+            background: #fff1f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #ffe4e6;
+        }
+
+        /* Color Coding */
+        .node-card.container-node { border-left: 4px solid var(--primary-color); }
+        .node-card.leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+
+        .fact-list {
+            margin: 8px 0 0 0;
+            padding-left: 18px;
+            font-size: 0.8em;
+            color: #374151;
+        }
+        .fact-list li { margin-bottom: 3px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>电商操盘手林总 - 知识库报告 (v3 Zero Bullet Points)</h1>
+        <p><strong>输入文件:</strong> 618大促复盘会议记录.txt, 选品策略调整_Q3.md | <strong>规则:</strong> 严格禁止列表归纳，强制拆分</p>
+    </div>
+
+    <div class="mindmap-container">
+
+        <!-- ROOT 1: 运营复盘 -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 核心业务</div>
+                    <div class="node-title">618 大促复盘总结</div>
+                    <div class="node-summary">GMV 破 5000 万但实际亏损。核心痛点是退货率高(45%)和投流 ROI 低(1.8)。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Transcript_618_Review.txt</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    
+                    <!-- L2: 问题归因 -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 关键问题</div>
+                            <div class="node-title">核心痛点归因</div>
+                            <div class="node-summary">由于更换面料导致产品体验差，加上投流策略激进，导致 DSR 下滑和利润亏损。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Transcript_618_Review.txt</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                             <!-- L3 Leaves -->
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">品控事故 (防晒衣)</div>
+                                    <div class="node-summary">工厂私换面料省2元成本，导致手感像"塑料布"。退货率飙升至 45%，DSR 掉 0.2 分。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Transcript_618_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 事实</div>
+                                    <div class="node-title">财务亏损 (ROI)</div>
+                                    <div class="node-summary">投流过猛，ROI 仅 1.8。算上物流退货成本，本次大促实际为负利润。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Transcript_618_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 应对措施 (Container Now!) -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 决策集合</div>
+                            <div class="node-title">短期止损措施</div>
+                            <div class="node-summary">针对下个月"清凉节"的紧急调整，包含停止投流、私域回馈和供应商处理三项行动。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Transcript_618_Review.txt</span>
+                            </div>
+                        </div>
+                        <!-- Split into Children (No Bullet Points!) -->
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 行动</div>
+                                    <div class="node-title">停止付费投流</div>
+                                    <div class="node-summary">不再做大规模付费推广，节省营销预算。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Transcript_618_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 行动</div>
+                                    <div class="node-title">启动私域回馈</div>
+                                    <div class="node-summary">搞"老粉回馈"活动，发放无门槛优惠券以稳住老客户口碑。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Transcript_618_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 行动</div>
+                                    <div class="node-title">拉黑供应商</div>
+                                    <div class="node-summary">涉事防晒衣工厂永久终止合作，不再下单。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Transcript_618_Review.txt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ROOT 2: 战略规划 -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 战略规划</div>
+                    <div class="node-title">Q3 秋冬季选品战略</div>
+                    <div class="node-summary">战略重心从"低价引流"转向"高复购品质"。目标：DSR 回升至 4.9，ROI > 2.5。</div>
+                    <div class="source-tags">
+                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                    </div>
+                </div>
+
+                <div class="children-container">
+                    
+                    <!-- L2: 选品策略 (Container) -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 核心策略</div>
+                            <div class="node-title">"重品控，轻低价"</div>
+                            <div class="node-summary">产品线的重大调整方向。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Strategy_Memo_Q3.md</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 选品</div>
+                                    <div class="node-title">砍掉低价款</div>
+                                    <div class="node-summary">停止销售 <29.9元的引流款，因其物流成本占比过高且拉低调性。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 选品</div>
+                                    <div class="node-title">主推美利奴羊毛衫</div>
+                                    <div class="node-summary">核心品：100%美利奴羊毛衫(¥199)。卖点：机洗不缩水。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 选品</div>
+                                    <div class="node-title">增加复购品类</div>
+                                    <div class="node-summary">新增纯棉打底衫、抗菌内裤等高频消耗品。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 供应链风控 (Container) -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 风控体系</div>
+                            <div class="node-title">供应链强管控</div>
+                            <div class="node-summary">引入更严格的验厂和对赌机制。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Strategy_Memo_Q3.md</span>
+                            </div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 机制</div>
+                                    <div class="node-title">人肉蹲点</div>
+                                    <div class="node-summary">所有 A 级爆款，林总亲自去工厂蹲守。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 机制</div>
+                                    <div class="node-title">对赌协议</div>
+                                    <div class="node-summary">次品率 > 1% 直接罚款货值 30%。</div>
+                                    <div class="source-tags">
+                                        <span class="source-tag">Strategy_Memo_Q3.md</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- L2: 资金周转 -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 财务行动</div>
+                            <div class="node-title">库存清理行动</div>
+                            <div class="node-summary">为秋冬备货回笼资金，必须在双 11 前清空夏款 (断码清仓)。</div>
+                            <div class="source-tags">
+                                <span class="source-tag">Strategy_Memo_Q3.md</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

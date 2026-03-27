@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Chloe (设计师) - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #fdf8f6; --card-bg: #ffffff; --primary-color: #ea580c; --secondary-color: #a8a29e; --life-color: #db2777; --text-color: #431407; --meta-color: #a8a29e; --border-color: #fed7aa; --line-color: #fdba74; }
+        body { font-family: "Optima", "PingFang SC", sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #9a3412; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.02); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #7c2d12; }
+        .node-summary { font-size: 0.9em; color: #78350f; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #fff7ed; padding: 2px 8px; border-radius: 4px; border: 1px solid #ffedd5; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fafaf9; }
+        .life-node { border-left: 4px solid var(--life-color); background: #fdf2f8; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chloe (设计师) - 知识图谱</h1>
+        <p><strong>Work:</strong> Interior Design, Branding | <strong>Life:</strong> Art, Baking, Yoga</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Design Projects -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 设计项目</div>
+                    <div class="node-title">商业与住宅设计</div>
+                    <div class="node-summary">推进咖啡馆(Cafe)和别墅(Villa)项目。面临施工队偷工减料和甲方风水修改的挑战。</div>
+                    <div class="source-tags"><span class="source-tag">Moodboard_Cafe.md</span><span class="source-tag">Transcript_Site_Argument.txt</span><span class="source-tag">Invoice_003.pdf</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 概念</div>
+                            <div class="node-title">"Sunday Morning" Cafe</div>
+                            <div class="node-summary">风格：诧寂(Wabi-sabi) + 极简。拒绝甲方的"网红霓虹灯"要求。</div>
+                            <div class="source-tags"><span class="source-tag">Moodboard_Cafe.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 施工</div>
+                            <div class="node-title">现场扯皮</div>
+                            <div class="node-summary">工长未按色卡(Pantone 7527C)施工，导致墙面肌理错误。勒令重做，工期延后 2 天。</div>
+                            <div class="source-tags"><span class="source-tag">Transcript_Site_Argument.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 变更</div>
+                            <div class="node-title">别墅风水修改</div>
+                            <div class="node-summary">甲方风水师要求厨房避开卫生间 ("水火不容")，导致需移动排污管，增加巨额成本。</div>
+                            <div class="source-tags"><span class="source-tag">Transcript_Feng_Shui.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Lifestyle (Aesthetic) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card life-node">
+                    <div class="node-level">Level 1 • 生活美学</div>
+                    <div class="node-title">灵感与日常</div>
+                    <div class="node-summary">通过看展、烘焙和瑜伽维持状态。面对母亲催婚压力，用"工作忙"推脱。</div>
+                    <div class="source-tags"><span class="source-tag">Schedule_Art_Week.md</span><span class="source-tag">Recipe_Bread.txt</span><span class="source-tag">WeChat_Mom.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 行程</div>
+                            <div class="node-title">上海艺术周</div>
+                            <div class="node-summary">重点：西岸博览会 & Prada荣宅。预算 ¥1700 (含甬府晚餐)。</div>
+                            <div class="source-tags"><span class="source-tag">Schedule_Art_Week.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 技能</div>
+                            <div class="node-title">酸种面包 (Sourdough)</div>
+                            <div class="node-summary">配方：70% 水含。发酵：室温4h + 冷藏12h。酵母名："Bubbles"。</div>
+                            <div class="source-tags"><span class="source-tag">Recipe_Bread.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

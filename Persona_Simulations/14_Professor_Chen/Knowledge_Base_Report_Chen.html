@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>陈教授 - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #fcfbf9; --card-bg: #ffffff; --primary-color: #57534e; --secondary-color: #a8a29e; --life-color: #d97706; --text-color: #292524; --meta-color: #78716c; --border-color: #e7e5e4; --line-color: #d6d3d1; }
+        body { font-family: "Songti SC", serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #1c1917; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 2px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #1c1917; }
+        .node-summary { font-size: 0.9em; color: #44403c; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #f5f5f4; padding: 2px 8px; border-radius: 2px; border: 1px solid #e7e5e4; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fafaf9; }
+        .life-node { border-left: 4px solid var(--life-color); background: #fffbeb; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>陈教授 - 知识图谱</h1>
+        <p><strong>学术:</strong> 机器学习, 论文指导 | <strong>生活:</strong> 摄影, 养猫</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Teaching & Research -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 学术工作</div>
+                    <div class="node-title">教学与科研</div>
+                    <div class="node-summary">教授机器学习课程，指导学生(李华)申请名校，担任 NeurIPS 领域主席。</div>
+                    <div class="source-tags"><span class="source-tag">Syllabus_ML.pdf</span><span class="source-tag">Recommendation_Letter.doc</span><span class="source-tag">Email_NeurIPS.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 课程</div>
+                            <div class="node-title">机器学习基础 (2026春)</div>
+                            <div class="node-summary">新增 Transformer 内容。考核侧重期末 Kaggle 竞赛 (40%)。</div>
+                            <div class="source-tags"><span class="source-tag">Syllabus_ML.pdf</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 推荐</div>
+                            <div class="node-title">李华 (CMU 申请)</div>
+                            <div class="node-summary">强力推荐。亮点：在 GNN 交通预测项目中提出创新 Attention 机制，且具备 debug 韧性。</div>
+                            <div class="source-tags"><span class="source-tag">Recommendation_Letter.doc</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Logistics & Admin -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 行政杂务</div>
+                    <div class="node-title">经费与报销</div>
+                    <div class="node-summary">处理繁琐的财务流程（打车票报销），以及采购科研设备（显卡）。</div>
+                    <div class="source-tags"><span class="source-tag">WeChat_Reimbursement.txt</span><span class="source-tag">Taobao_Chat_GPU.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 采购</div>
+                            <div class="node-title">显卡 (RTX 4090D)</div>
+                            <div class="node-summary">因禁售买不到 4090，折中购买 4 张 4090D，总价 6.8 万，走对公转账。</div>
+                            <div class="source-tags"><span class="source-tag">Taobao_Chat_GPU.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Life & Hobbies -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card life-node">
+                    <div class="node-level">Level 1 • 个人生活</div>
+                    <div class="node-title">兴趣与家庭</div>
+                    <div class="node-summary">涵盖西藏摄影计划、猫咪(煤球)健康管理及中年健身计划。</div>
+                    <div class="source-tags"><span class="source-tag">Trip_Plan_Tibet.md</span><span class="source-tag">Cat_Vaccination.jpg</span><span class="source-tag">Fitness_Plan.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 摄影</div>
+                            <div class="node-title">暑期西藏行 (318)</div>
+                            <div class="node-summary">装备：Sony A7R5 + 无人机。必拍点：鱼子西(日照金山)、然乌湖。</div>
+                            <div class="source-tags"><span class="source-tag">Trip_Plan_Tibet.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 宠物</div>
+                            <div class="node-title">煤球疫苗记录</div>
+                            <div class="node-summary">已完成三针猫三联。下次加强针：2026-09-05。需关注软便问题。</div>
+                            <div class="source-tags"><span class="source-tag">Cat_Vaccination.jpg</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

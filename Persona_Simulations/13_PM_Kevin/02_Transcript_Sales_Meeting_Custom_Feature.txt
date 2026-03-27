@@ -1,0 +1,17 @@
+Title: Sales vs Product - The "Red Button" Meeting
+Date: 2026-03-20
+Participants: Kevin (PM), Jessica (Sales VP)
+
+Jessica: Kevin, GlobalBank needs the "Export to PDF" button to be Red. And size 24 font.
+
+Kevin: Jessica, our design system uses Blue for primary actions. Red is for "Delete" or "Danger". If we make it red, users will think it's an error.
+
+Jessica: I don't care about your design system. The CIO of GlobalBank is 60 years old. He says he can't see the blue button. If we don't change it, he won't sign the renewal.
+
+Kevin: Can we make it "High Contrast" mode? An accessibility setting?
+
+Jessica: No. He wants it Red. Default.
+
+Kevin: Fine. I'll make a custom CSS override just for their tenant ID. But it's going to look ugly.
+
+Jessica: Ugly is fine. Unpaid is not fine. Thanks Kevin.

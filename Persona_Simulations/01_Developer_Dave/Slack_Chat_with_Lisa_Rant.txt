@@ -1,0 +1,19 @@
+[Slack - DM] Dave <-> Lisa
+------------------------------------------------
+Dave: Did you see the email from the new VP (Kevin)? He wants us to rewrite the ingestion pipeline in Rust. By next month.
+
+Lisa: Is he insane? We barely have enough people to keep the Python services running.
+
+Dave: He says Python is "not enterprise scale". He came from a High Frequency Trading shop. He thinks 10ms latency matters for a document search.
+
+Lisa: It's a search engine, not a stock exchange! Users take 5 seconds just to read the title.
+
+Dave: I tried to tell him. He interrupted me and asked if I knew what "memory safety" was. I've been coding for 15 years. I wanted to punch him.
+
+Lisa: So what do we do?
+
+Dave: We stall. I'm writing a "Architecture Defense" doc. Basically proving that the bottleneck is Network IO, not CPU. Rewriting in Rust won't save a single millisecond if the database is slow.
+
+Lisa: Good luck. If he pushes this, I might just take that offer from Databricks.
+
+Dave: Don't leave me alone with him. Please.

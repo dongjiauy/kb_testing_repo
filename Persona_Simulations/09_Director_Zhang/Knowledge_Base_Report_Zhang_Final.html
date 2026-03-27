@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>张导 - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #262626; --card-bg: #404040; --primary-color: #facc15; --secondary-color: #a3a3a3; --crisis-color: #dc2626; --text-color: #e5e5e5; --meta-color: #a3a3a3; --border-color: #525252; --line-color: #737373; }
+        body { font-family: "PingFang SC", sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #facc15; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 4px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.5); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #fff; }
+        .node-summary { font-size: 0.9em; color: #d4d4d4; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: #000; background: #facc15; padding: 2px 8px; border-radius: 2px; border: 1px solid #eab308; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #525252; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #450a0a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>张导 - 知识图谱</h1>
+        <p><strong>背景:</strong> 剧组欠薪、资本干预与抄袭指控</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Production Chaos -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • 制作危机</div>
+                    <div class="node-title">剧组停摆风险</div>
+                    <div class="node-summary">投资人跑路导致资金链断裂，群演讨薪，同时面临抄袭诉讼。</div>
+                    <div class="source-tags"><span class="source-tag">WeChat_Group_Unpaid.txt</span><span class="source-tag">Legal_Letter_Plagiarism.pdf</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 法律</div>
+                            <div class="node-title">版权侵权指控</div>
+                            <div class="node-summary">被指控抄袭网文《豪门弃少归来》，重合度 80%。面临 50 万索赔及下架风险。</div>
+                            <div class="source-tags"><span class="source-tag">Legal_Letter_Plagiarism.pdf</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 财务</div>
+                            <div class="node-title">群演暴动</div>
+                            <div class="node-summary">拖欠日结工资 3 天，群演威胁扣押摄像机。导演只能靠画饼 ("明天到账") 拖延。</div>
+                            <div class="source-tags"><span class="source-tag">WeChat_Group_Unpaid.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Creative Control -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 创作妥协</div>
+                    <div class="node-title">资本强奸剧本</div>
+                    <div class="node-summary">为了拿到投资，被迫接受带资进组演员的无理要求，导致剧情逻辑崩坏。</div>
+                    <div class="source-tags"><span class="source-tag">Script_Revision_Add_Scene.md</span><span class="source-tag">Script_Discussion.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 加戏</div>
+                            <div class="node-title">女三号上位</div>
+                            <div class="node-summary">金主要求丫鬟角色必须有感情线和特写。导演吐槽：观众会骂死，但为了钱只能改。</div>
+                            <div class="source-tags"><span class="source-tag">Script_Revision_Add_Scene.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

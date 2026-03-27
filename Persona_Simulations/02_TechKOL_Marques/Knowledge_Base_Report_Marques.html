@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marques (MKBHD) - Knowledge Base Report</title>
+    <style>
+        :root { --bg-color: #111; --card-bg: #222; --primary-color: #ef4444; --secondary-color: #3b82f6; --text-color: #eee; --meta-color: #aaa; --border-color: #333; --line-color: #444; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .header h1 { color: #fff; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.5); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #fff; }
+        .node-summary { font-size: 0.9em; color: #ccc; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: #fff; background: #333; padding: 2px 8px; border-radius: 4px; border: 1px solid #444; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #2a2a2a; }
+        .crisis-node { border-left: 4px solid #f59e0b; background: #3a2a1a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Marques (MKBHD) - Knowledge Base</h1>
+        <p><strong>Context:</strong> Brand Crisis, Content Pivot & Burnout</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Brand Crisis -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Reputation Crisis</div>
+                    <div class="node-title">The "AI Pin" Scandal</div>
+                    <div class="node-summary">Marques endorsed a product that turned out to be faked. Facing backlash, lawsuits, and a loss of audience trust.</div>
+                    <div class="source-tags"><span class="source-tag">Script_Apology.md</span><span class="source-tag">Email_Legal_Threat.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • The Truth</div>
+                            <div class="node-title">Faked Demo Units</div>
+                            <div class="node-summary">Review unit ran custom firmware connected to a backpack server. Retail units are bricks.</div>
+                            <div class="source-tags"><span class="source-tag">Script_Apology.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • Fallout</div>
+                            <div class="node-title">Legal & Financial Impact</div>
+                            <div class="node-summary">Returning $50k sponsorship. Brand threatening defamation lawsuit.</div>
+                            <div class="source-tags"><span class="source-tag">Email_Legal_Threat.txt</span></div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • Threat</div>
+                                    <div class="node-title">Defamation Claim</div>
+                                    <div class="node-summary">Brand claims "Fake Demo" accusation is libelous breach of NDA.</div>
+                                    <div class="source-tags"><span class="source-tag">Email_Legal_Threat.txt</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Strategy Pivot -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Content Strategy</div>
+                    <div class="node-title">The TikTok Pivot</div>
+                    <div class="node-summary">Long-form views down 30%. Forced to adopt high-energy, short-form content despite hating the style.</div>
+                    <div class="source-tags"><span class="source-tag">Idea_Board_TikTok.md</span><span class="source-tag">Journal_Burnout.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Concept</div>
+                            <div class="node-title">"Tech Roast" (15s)</div>
+                            <div class="node-summary">Pick one bad feature and destroy it. High engagement format.</div>
+                            <div class="source-tags"><span class="source-tag">Idea_Board_TikTok.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Concept</div>
+                            <div class="node-title">"ASMR Unboxing" (60s)</div>
+                            <div class="node-summary">Low effort content to feed the algorithm daily.</div>
+                            <div class="source-tags"><span class="source-tag">Idea_Board_TikTok.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Mental Health -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card leaf-node">
+                    <div class="node-level">Level 1 • Personal</div>
+                    <div class="node-title">Creator Burnout</div>
+                    <div class="node-summary">Identity crisis ("Who am I without MKBHD?"). Exhaustion from 4 years without vacation.</div>
+                    <div class="source-tags"><span class="source-tag">Journal_Burnout.md</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

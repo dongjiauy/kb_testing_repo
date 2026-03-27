@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python generate_knowledge_graph.py)",
+      "Bash(python3 generate_knowledge_graph.py)"
+    ]
+  }
+}

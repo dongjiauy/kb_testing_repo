@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>陈科长 - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #f8f9fa; --card-bg: #ffffff; --primary-color: #b91c1c; --secondary-color: #4b5563; --crisis-color: #991b1b; --text-color: #1f2937; --meta-color: #6b7280; --border-color: #e5e7eb; --line-color: #cbd5e1; }
+        body { font-family: "Songti SC", "SimSun", serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #b91c1c; font-size: 1.8em; font-family: "黑体", sans-serif; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 2px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.1); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #374151; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #fef2f2; padding: 2px 8px; border-radius: 2px; border: 1px solid #fee2e2; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #f9fafb; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fff1f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>陈科长 - 知识图谱</h1>
+        <p><strong>背景:</strong> 招商引资、仕途升迁与家庭危机</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Investment Work -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 招商工作</div>
+                    <div class="node-title">重大项目推进</div>
+                    <div class="node-summary">负责新能源电池厂引进及市长接待日安排。发现重大骗补风险。</div>
+                    <div class="source-tags"><span class="source-tag">Investigation_Report.doc</span><span class="source-tag">Mayor_Reception_Plan.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card crisis-node">
+                            <div class="node-level">Level 2 • 风险预警</div>
+                            <div class="node-title">电池厂骗补调查</div>
+                            <div class="node-summary">实地调查发现所谓总部是空壳，专利失效，法人是老赖。建议冷处理以保全领导面子。</div>
+                            <div class="source-tags"><span class="source-tag">Investigation_Report.doc</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 接待安排</div>
+                            <div class="node-title">市长接待日方案</div>
+                            <div class="node-summary">安排李总(新能源)和张董(药企)座谈。重点协调土地指标和拆迁问题。</div>
+                            <div class="source-tags"><span class="source-tag">Mayor_Reception_Plan.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Career & Family -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • 个人困境</div>
+                    <div class="node-title">仕途与家庭的双重危机</div>
+                    <div class="node-summary">副局长竞聘面临陪跑风险，同时因长期应酬导致痛风发作及妻子分居。</div>
+                    <div class="source-tags"><span class="source-tag">Speech_Draft.md</span><span class="source-tag">WeChat_Wife.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 升迁</div>
+                            <div class="node-title">竞聘演讲准备</div>
+                            <div class="node-summary">稿件内容平稳（守正创新），缺乏亮点。内心认为自己只是内定人选的陪跑。</div>
+                            <div class="source-tags"><span class="source-tag">Speech_Draft.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 家庭</div>
+                            <div class="node-title">分居危机</div>
+                            <div class="node-summary">妻子因无法忍受其长期不归家及身体状况（痛风），带着孩子回娘家并拉黑微信。</div>
+                            <div class="source-tags"><span class="source-tag">WeChat_Wife.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

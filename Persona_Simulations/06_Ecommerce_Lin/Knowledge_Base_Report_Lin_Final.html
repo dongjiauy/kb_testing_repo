@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>电商林总 - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #f8f9fa; --card-bg: #ffffff; --primary-color: #e11d48; --secondary-color: #059669; --crisis-color: #9f1239; --text-color: #1f2937; --meta-color: #6b7280; --border-color: #e5e7eb; --line-color: #cbd5e1; }
+        body { font-family: "PingFang SC", sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .header h1 { color: #881337; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #4b5563; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #fff1f2; padding: 2px 8px; border-radius: 4px; border: 1px solid #ffe4e6; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #fcfdfd; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fff5f5; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>电商林总 - 知识图谱</h1>
+        <p><strong>背景:</strong> 供应链决裂、税务稽查与直播自救</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: 核心危机 -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • 生死存亡</div>
+                    <div class="node-title">多重经营危机爆发</div>
+                    <div class="node-summary">公司面临税务稽查、合伙人散伙、库存积压三重打击，现金流极度紧张。</div>
+                    <div class="source-tags"><span class="source-tag">Tax_Audit_Notice.md</span><span class="source-tag">WeChat_Log_Breakup.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 合规风险</div>
+                            <div class="node-title">税务稽查通知</div>
+                            <div class="node-summary">涉嫌未代扣主播个税及关联公司避税。需补缴税款及滞纳金约 120 万。</div>
+                            <div class="source-tags"><span class="source-tag">Tax_Audit_Notice.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 团队动荡</div>
+                            <div class="node-title">合伙人(老王)决裂</div>
+                            <div class="node-summary">老王因不满"流量为王"策略，带走核心供应链单干。公司面临净资产为负的清算风险。</div>
+                            <div class="source-tags"><span class="source-tag">WeChat_Log_Breakup.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: 运营自救 -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 营销策略</div>
+                    <div class="node-title">库存清理与转型</div>
+                    <div class="node-summary">通过"卖惨直播"清理积压库存，同时调整选品策略，放弃低价引流。</div>
+                    <div class="source-tags"><span class="source-tag">Script_Tearful_Apology.txt</span><span class="source-tag">Strategy_Memo_Q3.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 执行脚本</div>
+                            <div class="node-title">抖音直播卖惨</div>
+                            <div class="node-summary">人设："中年失败男"。话术："199元清仓发工资"。目标：回笼资金。</div>
+                            <div class="source-tags"><span class="source-tag">Script_Tearful_Apology.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 选品调整</div>
+                            <div class="node-title">Q3 战略转向</div>
+                            <div class="node-summary">砍掉低价款，聚焦高复购品质款。</div>
+                            <div class="source-tags"><span class="source-tag">Strategy_Memo_Q3.md</span></div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 动作</div>
+                                    <div class="node-title">砍掉引流款</div>
+                                    <div class="node-summary">停止销售 29.9 元以下商品，因物流成本过高。</div>
+                                    <div class="source-tags"><span class="source-tag">Strategy_Memo_Q3.md</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

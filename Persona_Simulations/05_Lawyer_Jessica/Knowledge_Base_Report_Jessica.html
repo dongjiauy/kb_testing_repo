@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Jessica - Knowledge Base Report</title>
+    <style>
+        :root { --bg-color: #f3f4f6; --card-bg: #ffffff; --primary-color: #4b5563; --secondary-color: #9ca3af; --crisis-color: #b91c1c; --text-color: #111827; --meta-color: #6b7280; --border-color: #d1d5db; --line-color: #9ca3af; }
+        body { font-family: "Georgia", serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #1f2937; font-size: 1.8em; font-family: "Arial", sans-serif; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 4px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: relative; font-family: "Arial", sans-serif; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #374151; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #e5e7eb; padding: 2px 8px; border-radius: 2px; border: 1px solid #d1d5db; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #f9fafb; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fef2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Lawyer Jessica - Knowledge Base</h1>
+        <p><strong>Context:</strong> M&A Deals, Ethics & Mental Health</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Client Deal (Nexus AI) -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • M&A Transaction</div>
+                    <div class="node-title">Nexus AI Acquisition of "LegalGraph"</div>
+                    <div class="node-summary">Negotiating the purchase of a target with critical IP risks.</div>
+                    <div class="source-tags"><span class="source-tag">Transcript_Negotiation.txt</span><span class="source-tag">Legal_Opinion_IP.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card crisis-node">
+                            <div class="node-level">Level 2 • Deal Breaker Risk</div>
+                            <div class="node-title">IP Chain of Title Defect</div>
+                            <div class="node-summary">Target Founder (Rob) wrote core code before incorporation without an assignment agreement. He personally owns the IP.</div>
+                            <div class="source-tags"><span class="source-tag">Legal_Opinion_IP.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Mitigation</div>
+                            <div class="node-title">Confirmatory Assignment</div>
+                            <div class="node-summary">Require Rob to sign backdated assignment. Hold back $5M escrow until executed.</div>
+                            <div class="source-tags"><span class="source-tag">Legal_Opinion_IP.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Non-Compete</div>
+                            <div class="node-title">Founder Restriction</div>
+                            <div class="node-summary">Negotiated 2-year non-compete limited to "Enterprise Search". Rob wanted 1 year; Nexus wanted 3.</div>
+                            <div class="source-tags"><span class="source-tag">Transcript_Negotiation.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Career & Health -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Personal Crisis</div>
+                    <div class="node-title">Mental Health Breakdown</div>
+                    <div class="node-summary">Suffering from severe insomnia (3 days without sleep) due to fear of malpractice suits.</div>
+                    <div class="source-tags"><span class="source-tag">Transcript_Insomnia.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Performance</div>
+                            <div class="node-title">Partner Track Ambition</div>
+                            <div class="node-summary">Billing 2,800 hours/year (highest in group) to secure partnership, despite burnout.</div>
+                            <div class="source-tags"><span class="source-tag">Performance_Review.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

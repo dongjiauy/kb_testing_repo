@@ -1,0 +1,16 @@
+# 推荐信 (Letter of Recommendation)
+**被推荐人**: 李华 (本科生)
+**申请项目**: CMU CS Master
+
+To whom it may concern,
+
+It is my great pleasure to recommend Li Hua. He took my "Advanced Algorithms" course last year and ranked top 5% in the class.
+
+What impressed me most was his final project on "Graph Neural Networks for Traffic Prediction". He not only implemented the baseline but also proposed a novel attention mechanism that improved accuracy by 3%.
+
+Li Hua is not just smart; he is persistent. When he encountered a bug in the CUDA kernel, he spent 3 days debugging it instead of switching to a simpler library.
+
+I strongly support his application.
+
+Sincerely,
+Prof. Chen

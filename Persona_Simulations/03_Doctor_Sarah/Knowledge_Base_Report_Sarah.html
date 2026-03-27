@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Sarah - Knowledge Base Report</title>
+    <style>
+        :root { --bg-color: #f8f9fa; --card-bg: #ffffff; --primary-color: #0ea5e9; --secondary-color: #64748b; --crisis-color: #ef4444; --text-color: #1e293b; --meta-color: #94a3b8; --border-color: #e2e8f0; --line-color: #cbd5e1; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .header h1 { color: #0f172a; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #475569; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #f0f9ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #e0f2fe; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #f8fafc; }
+        .crisis-node { border-left: 4px solid var(--crisis-color); background: #fef2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dr. Sarah - Knowledge Base</h1>
+        <p><strong>Context:</strong> Medical Practice, Academic Pressure & Divorce</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Personal Crisis -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card crisis-node">
+                    <div class="node-level">Level 1 • Personal Life</div>
+                    <div class="node-title">Divorce Proceedings</div>
+                    <div class="node-summary">Husband (Tom) filed for divorce due to Sarah's workaholism ("Married to a ghost"). Mediation ongoing.</div>
+                    <div class="source-tags"><span class="source-tag">Transcript_Divorce.txt</span><span class="source-tag">Patient_Log_ICU.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Conflict</div>
+                            <div class="node-title">Work-Life Imbalance</div>
+                            <div class="node-summary">Sarah justifies absence as "saving lives" and paying for private school. Tom demands presence over money.</div>
+                            <div class="source-tags"><span class="source-tag">Transcript_Divorce.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Emotional Toll</div>
+                            <div class="node-title">Projecting on Patients</div>
+                            <div class="node-summary">Sarah sees her husband in dying patients (Trauma Victim John Doe).</div>
+                            <div class="source-tags"><span class="source-tag">Patient_Log_ICU.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Academic Career -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Research</div>
+                    <div class="node-title">Publication Struggle</div>
+                    <div class="node-summary">Aiming for Lancet/Nature to secure promotion. Facing rejection due to small sample size.</div>
+                    <div class="source-tags"><span class="source-tag">Rejection_Letter.txt</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Rejection Reason</div>
+                            <div class="node-title">Methodology Flaw</div>
+                            <div class="node-summary">Sample size (n=45) too small. Lack of double-blind control group.</div>
+                            <div class="source-tags"><span class="source-tag">Rejection_Letter.txt</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Clinical Practice -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • Clinical Cases</div>
+                    <div class="node-title">Patient Management</div>
+                    <div class="node-summary">Managing complex cardiac cases including Ischemic Heart Disease and rare Genetic Cardiomyopathy.</div>
+                    <div class="source-tags"><span class="source-tag">Patient_Consult.txt</span><span class="source-tag">Discharge_Summary.md</span><span class="source-tag">Case_Review.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Diagnosis</div>
+                            <div class="node-title">Mrs. Thompson (72F)</div>
+                            <div class="node-summary">Ischemic Heart Disease. Scheduled for Angioplasty. Low risk (<0.5% stroke).</div>
+                            <div class="source-tags"><span class="source-tag">Patient_Consult.txt</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Diagnosis</div>
+                            <div class="node-title">James Baker (45M)</div>
+                            <div class="node-summary">Unstable Angina. Stent placed. Requires Plavix for 12 months (Strict Adherence).</div>
+                            <div class="source-tags"><span class="source-tag">Discharge_Summary.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • Rare Case</div>
+                            <div class="node-title">Athlete (28F)</div>
+                            <div class="node-summary">Suspected ARVC (Genetic). Uncle died suddenly. Admitted for MRI/Telemetry.</div>
+                            <div class="source-tags"><span class="source-tag">Case_Review.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

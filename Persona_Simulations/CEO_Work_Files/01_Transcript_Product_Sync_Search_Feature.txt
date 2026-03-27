@@ -1,0 +1,32 @@
+Title: Product Sync - Search Feature (Critical Review)
+Date: 2026-03-08
+Participants: CEO (Alex), Product Lead (Sarah), Tech Lead (Dave)
+----------------------------------------
+
+Alex: Alright, let's cut to the chase. I used the search feature on the staging environment last night. It's slow. Like, painfully slow. I counted 4 seconds before the first result appeared.
+
+Dave: Yeah, we know. The vector search is hitting a bottleneck because we didn't index the metadata properly. If we want sub-second latency, we need to refactor the embedding pipeline.
+
+Alex: How long is that gonna take?
+
+Dave: Probably two weeks. Maybe three if we run into issues with the new model.
+
+Sarah: Alex, we promised the board we'd launch this feature by the 15th. If we delay, it pushes back the entire Q2 roadmap.
+
+Alex: I don't care about the board right now. I care about the user. If I'm a user and I type "sales report Q3" and I have to wait 4 seconds, I'm closing the tab. We cannot ship this. 
+
+Sarah: So what's the plan? Do we cut the semantic search part and just go with keyword matching for v1?
+
+Alex: No, keyword matching is 2010 tech. We are an AI company. Here's the decision: Dave, you get the two weeks. We delay the launch. Sarah, you draft a memo to the board explaining that we are prioritizing quality over speed. Tell them we found a critical UX flaw. Don't mention it's a backend issue, just say "User Experience Optimization".
+
+Dave: Okay, but that means the mobile app integration gets pushed too.
+
+Alex: Fine. Kill the mobile integration for now. Nobody is doing complex data analysis on their phone anyway. Focus 100% on the web latency. If it's not under 800ms, we don't ship. 
+
+Sarah: Understood. I'll update the GANTT chart. One more thing – the "Auto-Summarize" button. Do we keep it?
+
+Alex: That feature is actually good. Keep it. But hide it behind a "Beta" tag so if it hallucinates, users don't blame us. 
+
+Dave: Got it. 800ms target. We'll start the refactor today.
+
+Alex: Good. Let's not have this conversation again next week.

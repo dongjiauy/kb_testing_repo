@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Kevin (产品经理) - 知识图谱报告</title>
+    <style>
+        :root { --bg-color: #f8fafc; --card-bg: #ffffff; --primary-color: #3b82f6; --secondary-color: #64748b; --life-color: #10b981; --text-color: #1e293b; --meta-color: #94a3b8; --border-color: #e2e8f0; --line-color: #cbd5e1; }
+        body { font-family: "PingFang SC", sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 40px; line-height: 1.4; }
+        .header { margin-bottom: 30px; border-bottom: 2px solid var(--primary-color); padding-bottom: 15px; }
+        .header h1 { color: #1e40af; font-size: 1.8em; }
+        .mindmap-container { display: flex; flex-direction: column; gap: 40px; padding: 20px 0; }
+        .node-wrapper { display: flex; flex-direction: row; align-items: flex-start; margin-top: 15px; position: relative; }
+        .children-container { border-left: 1px solid var(--line-color); margin-left: 25px; padding-left: 25px; display: flex; flex-direction: column; gap: 5px; }
+        .node-wrapper::before { content: ''; position: absolute; top: 28px; left: -25px; width: 25px; height: 1px; background-color: var(--line-color); }
+        .root-level { border-left: none; margin-left: 0; padding-left: 0; }
+        .root-level > .node-wrapper::before { display: none; }
+        .node-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 12px 16px; width: 480px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: relative; }
+        .node-level { text-transform: uppercase; font-size: 0.7em; color: var(--meta-color); font-weight: 700; margin-bottom: 4px; }
+        .node-title { font-weight: 700; font-size: 1.1em; margin-bottom: 6px; color: #111827; }
+        .node-summary { font-size: 0.9em; color: #475569; margin-bottom: 8px; }
+        .source-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .source-tag { font-size: 0.75em; color: var(--primary-color); background: #eff6ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #dbeafe; }
+        .container-node { border-left: 4px solid var(--primary-color); }
+        .leaf-node { border-left: 4px solid var(--secondary-color); background: #f8fafc; }
+        .life-node { border-left: 4px solid var(--life-color); background: #f0fdf4; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Kevin (产品经理) - 知识图谱</h1>
+        <p><strong>Work:</strong> App Dev, Data Analysis | <strong>Life:</strong> Camping, Renovation</p>
+    </div>
+    <div class="mindmap-container">
+
+        <!-- L1: Work Projects -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 核心工作</div>
+                    <div class="node-title">SaaS 产品迭代</div>
+                    <div class="node-summary">负责移动端 App v2.0 的发版及 Web 端功能优化。面临大客户定制需求与数据下滑压力。</div>
+                    <div class="source-tags"><span class="source-tag">PRD_Mobile_App_v2.md</span><span class="source-tag">Meeting_Minutes_v3.1.docx</span></div>
+                </div>
+                <div class="children-container">
+                    <!-- L2: Roadmap -->
+                    <div class="node-wrapper">
+                        <div class="node-card container-node">
+                            <div class="node-level">Level 2 • 规划</div>
+                            <div class="node-title">版本路线图</div>
+                            <div class="node-summary">v3.1 重点修复 GlobalBank 的 PDF 导出问题及暗黑模式优化。Mobile v2.0 延期至 6 月。</div>
+                            <div class="source-tags"><span class="source-tag">Meeting_Minutes_v3.1.docx</span><span class="source-tag">PRD_Mobile_App_v2.md</span></div>
+                        </div>
+                        <div class="children-container">
+                            <div class="node-wrapper">
+                                <div class="node-card leaf-node">
+                                    <div class="node-level">Level 3 • 需求</div>
+                                    <div class="node-title">大客户定制</div>
+                                    <div class="node-summary">GlobalBank 强制要求"红色按钮"。Kevin 妥协，决定通过 CSS Override 实现。</div>
+                                    <div class="source-tags"><span class="source-tag">Transcript_Sales_Meeting.txt</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- L2: Data -->
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 数据洞察</div>
+                            <div class="node-title">Q1 用户活跃度下滑</div>
+                            <div class="node-summary">DAU 因服务器故障和营销削减下跌。用户粘性 (DAU/MAU) 降至 15%。</div>
+                            <div class="source-tags"><span class="source-tag">Excel_Data_Export_DAU.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Self Improvement -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card container-node">
+                    <div class="node-level">Level 1 • 自我提升</div>
+                    <div class="node-title">技能树点亮</div>
+                    <div class="node-summary">为了摆脱对研发的依赖，自学 SQL 并研读产品方法论。</div>
+                    <div class="source-tags"><span class="source-tag">Note_SQL_Self_Learning.md</span><span class="source-tag">Reading_Notes.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 技能</div>
+                            <div class="node-title">SQL 查询</div>
+                            <div class="node-summary">掌握 Join 和聚合函数，目标是下周独立跑出数据周报。</div>
+                            <div class="source-tags"><span class="source-tag">Note_SQL_Self_Learning.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- L1: Life & Family -->
+        <div class="children-container root-level">
+            <div class="node-wrapper">
+                <div class="node-card life-node">
+                    <div class="node-level">Level 1 • 个人生活</div>
+                    <div class="node-title">家庭建设与休闲</div>
+                    <div class="node-summary">筹备婚房装修(预算30万)及五一露营计划。</div>
+                    <div class="source-tags"><span class="source-tag">Excel_Renovation_Budget.md</span><span class="source-tag">Memo_Camping_Checklist.md</span></div>
+                </div>
+                <div class="children-container">
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 项目</div>
+                            <div class="node-title">婚房装修预算</div>
+                            <div class="node-summary">总预算 30 万。大头在硬装(8万)和家电(5万)。想装中央空调和洗碗机。</div>
+                            <div class="source-tags"><span class="source-tag">Excel_Renovation_Budget.md</span></div>
+                        </div>
+                    </div>
+                    <div class="node-wrapper">
+                        <div class="node-card leaf-node">
+                            <div class="node-level">Level 2 • 旅行</div>
+                            <div class="node-title">安吉露营</div>
+                            <div class="node-summary">4人行。装备齐全(挪客屋脊)。食材准备了五花肉和辛拉面。</div>
+                            <div class="source-tags"><span class="source-tag">Memo_Camping_Checklist.md</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
